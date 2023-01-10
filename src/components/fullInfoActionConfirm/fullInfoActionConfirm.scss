@@ -1,0 +1,201 @@
+@mixin mainConfirmHidden {
+  display: none;
+}
+
+@mixin mainConfirm {
+  max-width: 41%;
+  position: fixed;
+  top:8.8%;
+  left: 26%;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: white;
+  text-align: center;
+  padding-bottom: 3.5%;
+}
+
+@mixin mainConfirmH3 {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: #0B1219;
+  text-align: center;
+  margin: 7% 0px;
+  width: 100%;
+}
+
+@mixin  mainConfirmButtons{
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+@mixin buttonDischarge{
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+  color: #2C3034;
+  background-color: white;
+  font-size: 20px;
+  width: 30%;
+  padding: 0.7rem;
+  border: 1px solid #E1AA5A;
+}
+
+@mixin buttonDelete{
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  font-size: 20px;
+  background-color: #06554D;
+  padding: 0.7rem;
+  border:none;
+  width: 30%;
+
+}
+
+
+#buttonDisCharge:hover {
+  background-color: #E1AA5A;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#buttonDelete:hover {
+  background-color: #E1AA5A;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.mainConfirmHidden {
+  @include mainConfirmHidden;
+}
+
+.mainConfirm {
+  @include mainConfirm;
+
+
+
+  h3 {
+    @include mainConfirmH3;
+  }
+
+  .mainConfirmButtons {
+    @include mainConfirmButtons;
+  }
+
+  .buttonDisCharge{
+    @include buttonDischarge;
+  }
+
+  .buttonDelete{
+    @include buttonDelete;
+  }
+
+}
+
+
+@media (min-width: 1025px) and (max-width:1300px) {
+  .mainConfirm{
+    max-width: 48%;
+    left: 23%;
+  }
+  .mainConfirm h3{
+    font-size: 24px;
+  }
+
+  #buttonDisCharge{
+    font-size: 20px;
+  }
+
+  #buttonDelete{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width:1024px) {
+  .mainConfirm{
+    max-width: 48%;
+    left: 23%;
+  }
+  .mainConfirm h3{
+    font-size: 20px;
+  }
+
+  #buttonDisCharge{
+   font-size: 16px;
+    width: 40%;
+  }
+
+  #buttonDelete{
+    font-size: 16px;
+    width: 40%;
+  }
+}
+
+@media (min-width: 500px) and (max-width:768px) {
+  .mainConfirm{
+    max-width:88%;
+    left: 6%;
+    top:9%;
+  }
+
+  #buttonDisCharge{
+    width: 45%;
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  #buttonDelete{
+    width: 45%;
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  .mainConfirm h3{
+    font-size: 20px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width:499px) {
+  .mainConfirm{
+    max-width:88%;
+    left: 6%;
+    top:11%;
+  }
+
+  #buttonDisCharge{
+    width: 45%;
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  #buttonDelete{
+    width: 45%;
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  .mainConfirm h3{
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,244 @@
+@mixin mainTitle{
+  position: relative;
+}
+
+@mixin main{
+  padding-bottom: 2px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin addMember{
+  width: 95%;
+  position: relative;
+  display: flex;
+  justify-content: right;
+}
+
+@mixin mainTitleButton{
+  width: 12%;
+  display: flex;
+  position: absolute;
+  right: -4%;
+  top:-15px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #06554D;
+  border:none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+@mixin mainTitleButtonLapTop{
+  right: -2%;
+  top:-19px
+}
+
+@mixin mainConfirmHidden{
+  display: none;
+}
+
+@mixin mainH1{
+  padding:20px 0px 25px 0px;
+  font-family: 'Arian AMU';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.04em;
+  color: #0B1219;
+  text-align: left;
+}
+
+.all{
+  position: relative;
+  background-color:white;
+  padding-bottom: 2px;
+  z-index: 1000;
+}
+
+
+.allActive{
+  position: relative;
+  background:rgba(11, 18, 25, 0.5);
+  padding-bottom: 2px;
+  z-index: 1000;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 18, 25, 0.7);;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 99;
+}
+
+.overlayPassive{
+  display: none;
+}
+
+
+.memberFullInfo{
+  position: relative;
+  z-index: 1;
+}
+
+
+.font {
+  width: 30px;
+  height: 30px;
+}
+
+.main {
+  @include main;
+  h1{
+    @include mainH1;
+  }
+}
+
+.mainTitle{
+  @include mainTitle;
+  button{
+    @include mainTitleButton;
+  }
+}
+
+.addMember{
+  @include addMember
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .mainTitle{
+    button{
+      @include mainTitleButtonLapTop;
+    }
+    h1{
+      margin-left: 2.5%;
+    }
+  }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mainTitle {
+    .mainButton {
+      right: 0%;
+      top: -19px;
+    }
+    h1{
+      margin-left: 2.5%;
+    }
+  }
+}
+
+//Tablet
+
+@media (min-width: 691px) and (max-width: 768px) {
+  .addMember{
+    button{
+      right: 3.5%;
+    }
+  }
+
+  .mainTitle{
+    h1{
+      margin-left: 2.5%;
+    }
+  }
+}
+
+@media (min-width: 626px) and (max-width:690px) {
+  .mainTitle {
+    .mainButton {
+      right: 5%;
+      top: -13px;
+    }
+
+    h1{
+      margin-left: 2.5%;
+    }
+  }
+}
+
+@media (min-width: 520px) and (max-width: 625px) {
+  .addMember{
+    button{
+      right: 8%;
+    }
+  }
+  .mainTitle{
+    h1{
+      margin-left: 2.5%;
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width: 519px) {
+  .addMember{
+    button{
+      right: 10%;
+    }
+  }
+  .mainTitle{
+    h1{
+      margin-left: 2.5%;
+    }
+  }
+}
+
+//medium
+@media (min-width: 376px) and (max-width: 425px) {
+  .mainButton{
+    right: 22%;
+    top:-13px;
+  }
+  .addMember{
+    button{
+      right: 17%;
+    }
+  }
+
+  .mainTitle{
+    h1{
+      margin-left: 2.5%;
+    }
+  }
+}
+
+
+//small
+@media (min-width: 320px) and (max-width:375px ) {
+  .main {
+    h1 {
+      font-size: 20px;
+      margin-left: 4%;
+    }
+
+    .addMember {
+      width: 95%;
+      bottom: 10px;
+
+      button {
+        right: 15%;
+        padding-right: 1px;
+      }
+
+    }
+
+  }
+}
+
+
+
+

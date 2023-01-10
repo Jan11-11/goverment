@@ -1,0 +1,497 @@
+@mixin memberLeftPart {
+  display: flex;
+  justify-content: left;
+  width: 75%;
+}
+
+@mixin memberLeftPartImage{
+  width: 30%;
+  height: 100%;
+  margin-top: 15px;
+  position: relative;
+}
+
+@mixin memberLeftPartDescription{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  width: 70%;
+}
+
+
+
+@mixin  memberLeftPartDescriptionChild {
+  width: 100%;
+  display: flex;
+  text-align:left;
+  flex-wrap: wrap;
+  font-size:14px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+@mixin  memberLeftPartDescriptionChildParagraph{
+  width: 100%;
+  padding-top: 2%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-weight: 700;
+}
+
+
+@mixin  memberLeftPartDescriptionChildSpan{
+  font-weight: 200;
+  font-size: 14px;
+}
+
+
+
+//LapTopMedium
+@mixin memberLeftPartDescriptionChildLapTopMedium{
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+//Laptop
+@mixin memberLeftPartDescriptionChildLapTop{
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+@mixin memberLeftPartDescriptionChildParagraphLapTop{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@mixin memberLeftPartDescriptionChildSpanLapTop{
+  width: 100%;
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+
+
+@mixin memberLeftPartDescriptionP{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 2% 0px;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+  color: #0B1219;
+}
+
+
+//Tablet
+@mixin memberLeftPartTablet{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3px auto;
+}
+
+@mixin memberLeftPartImageTablet{
+  width: 100%;
+  display: flex;
+  margin: 16px ;
+  position: relative;
+}
+
+@mixin memberLeftPartImageGroupTablet{
+  display: inline;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+@mixin memberLeftPartImageGroupTablet{
+  display: inline;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+@mixin memberLeftPartDescriptionTablet{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin  memberLeftPartDescriptionChildTablet{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@mixin memberContentLeftPartDescriptionPTablet{
+  font-size: 12px;
+  width: 99%;
+  margin: 0 auto;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin memberContentLeftPartDescriptionSpanTablet{
+  font-size: 12px;
+  font-weight: 200;
+  width: 99%;
+}
+
+
+
+
+//medium
+@mixin memberLeftPart376_425{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3px auto;
+}
+
+@mixin memberLeftPartImage376_425{
+  width: 100%;
+  display: flex;
+  margin: 16px ;
+  position: relative;
+}
+
+@mixin memberLeftPartImageGroup375_425{
+  display: inline;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+@mixin memberLeftPartImageGroup376_425{
+  display: inline;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+@mixin memberLeftPartDescription376_425{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin  memberLeftPartDescriptionChild376_425{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@mixin memberContentLeftPartDescriptionP376_425{
+  font-size: 12px;
+  width: 99%;
+  margin: 0 auto;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin memberContentLeftPartDescriptionSpan376_425{
+  font-size: 12px;
+  font-weight: 200;
+  width: 99%;
+}
+
+
+
+//small
+@mixin memberLeftPart320_375 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3px auto;
+}
+
+@mixin memberLeftPartImage320_375{
+  width: 100%;
+  display: flex;
+  margin: 16px ;
+  position: relative;
+}
+
+@mixin memberLeftPartImageGroup320_375{
+  display: inline;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+@mixin memberLeftPartDescription320_375{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin  memberLeftPartDescriptionChild320_375 {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@mixin memberContentLeftPartDescriptionP320_375{
+  font-size: 12px;
+  width: 97%;
+  margin: 0 auto;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+@mixin memberContentLeftPartDescriptionSpan320_375{
+  font-size: 12px;
+  font-weight: 200;
+  width: 100%;
+}
+
+
+@mixin memberLeftPartImageImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.group{
+  display: none;
+}
+
+
+.imgPassive{
+  filter: saturate(0%);
+}
+
+#memberAllParagraph{
+  color: #9C9C9C;
+}
+
+#memberAllParagraph1{
+  color: #9C9C9C;
+}
+
+
+
+.memberLeftPart{
+  @include memberLeftPart;
+
+  .memberLeftPartDescription{
+    margin:0% 0 0 3%;
+    height: 80%;
+  }
+}
+
+.memberLeftPartDescriptionChild{
+  @include memberLeftPartDescriptionChild
+}
+
+.memberLeftPartDescriptionChildParagraph{
+  @include memberLeftPartDescriptionChildParagraph;
+  span{
+    font-size: 14px;
+    font-weight: 200;
+    margin-left: 6px;
+    padding-bottom: 1px;
+  }
+}
+
+//LepTopMedium
+@media (min-width: 769px) and (max-width: 1199px) {
+  .memberLeftPartDescriptionChild {
+    @include memberLeftPartDescriptionChildLapTopMedium;
+  }
+    .memberLeftPartDescriptionChildParagraph {
+      @include memberLeftPartDescriptionChildParagraphLapTop;
+    }
+
+    #memberLeftPartDescriptionChildSpan {
+      @include memberLeftPartDescriptionChildSpanLapTop
+    }
+  #memberLeftPartDescriptionChildSpan{
+    margin-left: 0px;
+  }
+
+}
+
+
+//LapTopMedium
+@media (min-width: 769px) and (max-width: 1024px) {
+  .memberLeftPartDescriptionChild {
+    @include memberLeftPartDescriptionChild
+  }
+
+
+
+  .memberLeftPartDescription {
+    @include memberLeftPartDescription;
+  }
+
+
+  .memberLeftPart span {
+    @include memberContentLeftPartDescriptionP320_375
+  }
+}
+
+
+@media (min-width: 840px) and (max-width: 769px){
+  .memberLeftPart{
+    width: 70%;
+  }
+  #memberLeftPartDescriptionChildSpan{
+    margin-left: 0px;
+  }
+}
+
+
+//
+
+//Tablet
+@media (min-width: 426px) and (max-width: 768px) {
+  .memberLeftPart{
+    @include memberLeftPartTablet;
+  }
+  #memberLeftPartDescriptionChildSpan{
+    margin-left: 0px;
+  }
+
+
+
+  .memberLeftPartImage{
+    @include memberLeftPartImageTablet;
+    .img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .group{
+    @include memberLeftPartImageGroupTablet;
+  }
+
+  .memberLeftPartDescription{
+    @include memberLeftPartDescriptionTablet;
+  }
+
+  .memberLeftPartDescriptionChild{
+    @include memberLeftPartDescriptionChildTablet;
+  }
+
+  .memberLeftPartDescriptionChildParagraph{
+    @include memberContentLeftPartDescriptionPTablet;
+    span{
+      @include memberContentLeftPartDescriptionSpanTablet;
+    }
+  }
+}
+
+
+
+//medium
+@media (min-width: 376px) and (max-width: 425px) {
+  .memberLeftPart{
+    @include memberLeftPart376_425;
+  }
+  #memberLeftPartDescriptionChildSpan{
+    margin-left: 0px;
+  }
+
+  .memberLeftPartImage{
+    @include memberLeftPartImage376_425;
+    .img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .group{
+    @include memberLeftPartImageGroup375_425;
+  }
+
+  .memberLeftPartDescription{
+    @include memberLeftPartDescription376_425;
+  }
+
+  .memberLeftPartDescriptionChild{
+    @include memberLeftPartDescriptionChild376_425;
+  }
+
+  .memberLeftPartDescriptionChildParagraph{
+    @include memberContentLeftPartDescriptionP376_425;
+    span{
+      @include memberContentLeftPartDescriptionSpan376_425;
+    }
+  }
+}
+
+
+
+//small
+@media (min-width: 319px) and (max-width: 375px) {
+  .memberLeftPart{
+    @include memberLeftPart320_375;
+  }
+
+  #memberLeftPartDescriptionChildSpan{
+    margin-left: 0px;
+  }
+
+  .memberLeftPartImage{
+    @include  memberLeftPartImage320_375;
+    .img{
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  .group{
+    @include memberLeftPartImageGroup320_375;
+  }
+  .memberLeftPartDescription{
+    @include memberLeftPartDescription320_375;
+  }
+
+  .memberLeftPartDescriptionChild{
+    @include memberContentLeftPartDescriptionP320_375;
+  }
+
+  .memberLeftPartDescriptionChildParagraph{
+    @include memberContentLeftPartDescriptionP320_375;
+  }
+
+  #memberLeftPartDescriptionChildSpan{
+    @include memberContentLeftPartDescriptionSpan320_375
+  }
+}

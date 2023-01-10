@@ -1,0 +1,63 @@
+$background-color: #0B1219;
+.body{
+  background-color: $background-color;
+  width: 100%;
+  height: 100%;
+}
+
+
+@mixin container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin containerH1{
+  font-family: 'Arian AMU';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;;
+}
+
+.container {
+  @include container;
+
+  h1 {
+    @include containerH1
+  }
+}
+
+
+
+@media   (min-width: 899px) and (max-width:1199px) {
+  #members{
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #containerTitle{
+    font-size: 18px;
+    margin-left: 3.5%;
+  }
+
+}
+@media  (min-width: 320px) and (max-width: 899px) {
+  #members{
+    width:95%;
+    margin: 0 auto;
+  }
+
+  #containerTitle{
+    font-size: 14px;
+    margin-left: 3.5%;
+  }
+}
+
+
+
+
+
+
+

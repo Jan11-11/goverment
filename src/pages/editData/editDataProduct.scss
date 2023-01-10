@@ -1,0 +1,436 @@
+$background-color: #0B1219;
+@use "sass:math";
+.createData {
+    overflow-x: hidden;
+    font-family:Segoe UI;
+}
+
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+
+        .pageTitle {
+            width: 100%;
+            font-weight: 700;
+            font-size: 30px;
+            margin-top: 3%;
+        }
+
+        .createpage {
+            width: 100%;
+            height: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+
+            .createimg {
+               width:35%;
+                margin-top: -6%;
+                height: 308px;
+                background: #F9F9F9;
+
+
+
+                img {
+
+
+                     display: block;
+                     margin-left: auto;
+                     margin-right: auto;
+                     margin-top: 40px;
+
+
+
+
+
+                }
+
+            }
+
+            .create {
+                width: 60%;
+                position: relative;
+
+
+                .createInput {
+                    width: 100%;
+
+                    .createName {
+                        width: 100%;
+
+                        label {
+                            width: 100%;
+                            font-weight: 400;
+                            font-size: 14px;
+
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 12px 2px;
+                            border: 1px solid #0B1219;
+
+                        }
+                    }
+
+                    .createInfo {
+                        width: 100%;
+                        margin-top: 62px;
+
+                        label {
+                            width: 100%;
+                            font-weight: 400;
+                            font-size: 14px;
+
+                        }
+
+                        input {
+                            width: 100%;
+                            padding-bottom: 20%;
+
+
+                        }
+                    }
+
+                }
+
+
+                .buttons {
+                    // width: 60%;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: 5%;
+
+
+
+                    .removeBtn {
+
+
+                        border: 2px solid #06554D;
+                        background-color: #FFFFFF;
+                        padding: 12px 80px 16px 80px;
+                        font-size: 20px;
+
+                    }
+
+                    .addBtn {
+                        // width: 40%;
+                        margin-left: 24px;
+                        color: #FFFFFF;
+                        border: 1px solid#06554D;
+                        background-color: #06554D;
+                        padding: 12px 80px 16px 80px;
+                        font-size: 20px;
+                    }
+                }
+
+
+                .leftbtn {
+                    position: absolute;
+                    left: -65%;
+                    top: 90%;
+
+                    img {
+                        margin-right: 10px;
+                    }
+
+                }
+
+
+
+            }
+
+        }
+
+        .vzgo{
+            width: 100px;
+            height: 100px;
+        }
+
+
+
+@media (max-width:1071px) and (min-width:769px){
+
+            #container {
+                width: 90%;
+                margin: 0 auto;
+
+
+            }
+
+            #createTitle {
+                width: 100%;
+                font-size: 30px;
+                font-weight: bold;
+
+
+
+            }
+
+            #createpage {
+                width: 100%;
+                display: flex;
+                flex-wrap: no-wrap;
+                justify-content: center;
+                margin-top: 36px;
+
+
+
+            }
+
+            #createimg {
+
+                width: 60%;
+
+
+            }
+
+            #create {
+                width: 80%;
+                margin-left: 3%;
+            }
+
+            #createInput {
+                width: 100%;
+                margin-top: 20px;
+
+            }
+
+            #createName {
+
+                width: 100%;
+
+                label {
+                    width: 100%;
+                }
+
+                input {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+
+            #createInfo {
+                width: 100%;
+                margin-top: 10%;
+                input{
+                    padding-bottom: 25%;
+                }
+            }
+
+            #buttons {
+                width: 100%;
+                margin-left: 6%;
+                margin-top: 20px;
+
+
+                #removeBtn {
+                    width: 45%;
+                    padding: 6px 25px 10px 25px;
+                    font-size: 18px;
+                }
+
+                #addBtn {
+                    width: 45%;
+                    padding: 6px 24px 10px 24px;
+                    font-size: 18px;
+                }
+            }
+
+            #leftBtn {
+                top: 90%;
+                left: -80%;
+                z-index: 60;
+            }
+}
+
+
+@media (max-width:769px) and (min-width:505px){
+
+
+            #container {
+                width: 90%;
+                margin: 0 auto;
+
+
+            }
+
+            #createTitle {
+                width: 100%;
+                font-size: 28px;
+                font-weight: bold;
+                text-align: center;
+
+
+            }
+
+            #createpage {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 66px
+
+
+
+            }
+
+            #createimg {
+                width: 70%;
+
+
+
+
+            }
+
+            #create {
+                width: 70%;
+
+            }
+
+            #createInput {
+                width: 100%;
+            }
+
+            #createName {
+                margin-top: 49px;
+                width: 100%;
+
+                label {
+                    width: 100%;
+                }
+
+                input {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+
+            #createInfo {
+                width: 100%;
+                margin-top: 5%;
+            }
+
+            #buttons {
+                width: 100%;
+                margin-top: 20px;
+                margin-left: 2%;
+
+
+                #removeBtn {
+                    width: 45%;
+                    padding: 6px 27px 10px 27px;
+                    font-size: 20px;
+                }
+
+                #addBtn {
+                    width: 45%;
+                    padding: 6px 24px 10px 24px;
+                    font-size: 20px;
+                }
+            }
+
+            #leftBtn {
+                top: 3%;
+                left: 0;
+                z-index: 60;
+            }
+
+
+        }
+
+@media (max-width:505px){
+
+
+            #container {
+                width: 90%;
+                margin: 0 auto;
+
+
+            }
+
+            #createTitle {
+                width: 100%;
+                font-size: 22px;
+                font-weight: bold;
+                text-align: center;
+
+
+            }
+
+            #createpage {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 66px
+
+
+
+            }
+
+            #createimg {
+                width: 100%;
+                margin-top: -40px;
+
+            }
+
+            #create {
+                width: 100%;
+            }
+
+            #createInput {
+                width: 100%;
+            }
+
+            #createName {
+                margin-top: 38px;
+                width: 100%;
+
+                label {
+                    width: 100%;
+                }
+
+                input {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+
+            #createInfo {
+                width: 100%;
+                margin-top: 10%;
+            }
+
+            #buttons {
+                width: 100%;
+                margin-top: 10px;
+                margin-left: 2%;
+
+
+                #removeBtn {
+                    width: 45%;
+                    padding: 6px 27px 10px 27px;
+                    font-size: 14px;
+                }
+
+                #addBtn {
+                    width: 45%;
+                    padding: 6px 24px 10px 24px;
+                    font-size: 14px;
+                }
+            }
+
+            #leftBtn {
+                top: 3%;
+                left: 0;
+                z-index: 60;
+            }
+
+
+        }

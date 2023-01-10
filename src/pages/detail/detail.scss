@@ -1,0 +1,268 @@
+.detail{
+    font-family: 'Segoe UI';
+    font-style: normal;
+    background-color: #0B1219;
+    height: 100vh;
+    overflow-x: hidden;
+    .greenline{
+        width: 100%;
+        background: #06554D;
+        height: 100px;
+        position: absolute;
+        margin-top: 134px;
+
+    }
+
+    .contan{
+        max-width: 1200px;
+        margin:0 auto;
+        margin-top: 74px;
+        .chunk{
+            display: flex;
+            justify-content: space-between;
+            .chunkleftdiv {
+                    width: 42%;
+                    margin: auto auto;
+                    border: 1px solid #2C3034;
+                    z-index: 1;
+                    .chunkleft{
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin:0.625rem;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+            }
+            .chunkright{
+                width: 55%;
+                color: #FFFFFFFF;
+                font-size: 22px;
+                z-index: 1;
+                margin-left: 7%;
+                margin-top: 98px;
+                .fullName{
+                    font-weight: 700;
+                    margin-bottom: 70px;
+                }
+
+                .fullInfo{
+                    font-weight: 400;
+
+
+                }
+
+            }
+        }
+    }
+}
+@media (max-width:1025px){
+    #chunkleftdiv{
+        min-width:350px ;
+        font-size: 20px;
+    }
+    #chunkright{
+        font-size: 20px;
+    }
+}
+@media (max-width:962px) {
+    .chunkleftdiv {
+        min-width: 360px;
+    }
+    #fullName{
+        font-size: 19px;
+    }
+    #fullInfo{
+        font-size: 19px;
+    }
+}
+@media (max-width:860px) {
+    #chunkleftdiv {
+        margin-top: 20px;
+        min-width: 360px;
+    }
+
+    #fullName {
+        font-size: 18px;
+    }
+
+    #fullInfo {
+        font-size: 16px;
+    }
+}
+@media (max-width:809px) {
+    #chunkleftdiv {
+        margin-top: 20px;
+        min-width: 360px;
+    }
+    #chunkrifht{
+        width: 60%;
+    }
+
+    #fullName {
+        font-size: 18px;
+    }
+
+    #fullInfo {
+        font-size: 15px;
+    }
+}
+@media (max-width:770px) {
+    #greenline{
+        top: 214px;
+    }
+    #chunk{
+        margin-top: -40px;
+        flex-direction: column;
+    }
+    #chunkleftdiv {
+        width: 388px;
+    }
+
+    #chunkright {
+        margin-top:10px;
+        margin-left:20%;
+        text-align: center;
+    }
+
+    #fullName {
+        font-size: 18px;
+    }
+
+    #fullInfo {
+        font-size: 17px;
+    }
+}
+@media (max-width:522px) {
+    #greenline {
+        top: 214px;
+    }
+
+    #chunk {
+        margin-top: -20px;
+        flex-direction: column;
+    }
+
+    #chunkleftdiv {
+        width: 368px;
+        #chunkleft{
+            margin: 6px;
+
+        }
+    }
+
+    #chunkright {
+        margin-top: 10px;
+        margin-left: 20%;
+        text-align: center;
+    }
+
+    #fullName {
+        font-size: 18px;
+    }
+
+    #fullInfo {
+        font-size: 16px;
+    }
+}
+@media (max-width:430px) {
+    #greenline {
+        top: 214px;
+    }
+
+    #chunk {
+        margin-top: -10px;
+        flex-direction: column;
+    }
+
+    #chunkleftdiv {
+        width: 300px;
+
+        #chunkleft {
+            margin: 6px;
+
+        }
+    }
+
+    #chunkright {
+        margin-top: 10px;
+        margin-left: 20%;
+
+    }
+
+    #fullName {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #fullInfo {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+@media (max-width:402px) {
+    #greenline {
+        top: 214px;
+    }
+
+    #chunk {
+        margin-top: 90px;
+        flex-direction: column;
+    }
+
+    #chunkleftdiv {
+        min-width: 288px;
+
+        #chunkleft {
+            margin: 6px;
+
+        }
+    }
+
+    #chunkright {
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 10%;
+
+    }
+
+    #fullName {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #fullInfo {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+@media (max-width:350px) and (min-width:320px) {
+    #greenline {
+        top: 214px;
+    }
+    #chunk {
+        margin-top: 90px;
+        flex-direction: column;
+    }
+    #chunkleftdiv {
+        min-width: 288px;
+        #chunkleft {
+            margin: 6px;
+        }
+    }
+    #chunkright {
+        width: 70%;
+        margin-top: 10px;
+        margin-left: 10%;
+    }
+    #fullName {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #fullInfo {
+        font-size: 14px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,310 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+$white: #FFFFFF;
+$lightGreen: #06554D;
+$lightBlack: #0B1219;
+$object-fit: object-fit;
+$SegoeUI: "Segoe UI";
+$normal: "normal";
+
+.login {
+  height: 100vh;
+  background-image: url(../../../government/fon.png);
+}
+
+@mixin main {
+  width: 100%;
+  text-align: center;
+}
+
+@mixin container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+
+}
+
+@mixin containerMain {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+
+
+@mixin loginImage {
+  width: 55.5%;
+}
+
+@mixin loginForm {
+  width: 44.5%;
+  background: #0B1219;
+}
+
+@mixin loginFormTitle {
+  font-family: $SegoeUI;
+  font-style: $normal;
+  font-weight: 700;
+  font-size: 1.85rem;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  color: $white;
+  margin-top: 12%;
+}
+
+@mixin loginFormChild {
+  width: 63%;
+  margin: 6% auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin loginFormCheckbox {
+  width: 63%;
+  margin: 6% auto;
+  position: relative;
+  align-items: center;
+}
+
+@mixin loginFormCheckboxChild {
+  width: 58px;
+  position: absolute;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+#remcheck{
+  margin: 5px;
+}
+
+@mixin loginFormChildInput {
+  display: block;
+  width: 100%;
+  line-height: 0px;
+  border: none;
+  padding: 12px;
+}
+
+@mixin loginFormChildesPlaceholder {
+  font-family: $SegoeUI;
+  font-style: $normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  margin: 10px;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #0B1219;
+}
+
+@mixin loginFormChildesLabel {
+  font-family: $SegoeUI;
+  font-style: $normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 5px;
+  letter-spacing: 0.04em;
+  color: $white
+}
+
+@mixin loginFormButton {
+  width: 63%;
+  margin: 3rem auto;
+  align-items: center;
+  text-align: center;
+  background-color: $lightGreen;
+  border: none;
+  padding: 13px 0;
+  font-family: $SegoeUI;
+  font-style: $normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  transition: 0.1s all linear;
+}
+
+
+
+.main {
+  @include main
+}
+
+.container {
+  @include container;
+}
+
+
+
+.containerMain {
+  @include containerMain;
+}
+
+.loginForm {
+  @include loginForm;
+}
+
+.loginImage {
+  @include loginImage;
+}
+
+.loginForm {
+  @include loginForm;
+}
+
+.loginImage img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.loginFormTitle {
+  @include loginFormTitle
+}
+
+.loginFormChild {
+  @include loginFormChild;
+
+  input {
+    @include loginFormChildInput;
+  }
+
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  label {
+    @include loginFormChildesLabel
+  }
+
+  input::placeholder {
+    @include loginFormChildesPlaceholder
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+}
+
+.loginFormCheckbox {
+  @include loginFormCheckbox;
+
+  .loginFormCheckboxChild {
+    @include loginFormCheckboxChild;
+
+    input[type="checkbox"] {
+      accent-color: black;
+
+    }
+  }
+
+  label {
+    color: #FFFFFF;
+  }
+}
+
+.loginFormButton {
+  @include loginFormButton
+}
+#loginError1{
+  border: 2px solid red !important;
+}
+.loginError1{
+ border: 2px solid red !important;
+}
+
+
+
+
+.login_p {
+  height: 0;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  color: red;
+  margin-top: 7px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.password_p {
+  height: 0;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  color: red;
+  margin-top: 7px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loginFormChildid {
+  width: 100%;
+  height: 44px;
+}
+.loginFormCheckboxChild{
+  input[type="checkbox"]:checked{
+    background: #E1AA5A !important;
+    color: white !important;
+  }
+    input[type='checkbox']::after {
+      box-shadow: none !important;
+    }
+}
+#loginFormChildButton:hover{
+  cursor: pointer;
+  background-color:#E1AA5A ;
+}
+#loginFormChildButton:active{
+  background: #9E9E9E;
+}
+
+@media (max-width:768px) and (min-width:320px) {
+  .container {
+    padding: 0px;
+
+  }
+
+  .loginImage {
+    width: 100%;
+    //  height: 30%;
+  }
+
+  .loginForm {
+    width: 100%;
+  }
+
+  #loginFormChildLogin {
+    width: 83%;
+  }
+
+  #loginFormChildPassword {
+    width: 83%;
+  }
+
+
+  #loginFormChildCheckbox {
+    width: 83%;
+  }
+
+  #loginFormChildButton {
+    width: 83%;
+  }
+
+ 
+
+  .loginFormTitle {
+    font-size: 22px;
+  }
+
+  
+}
