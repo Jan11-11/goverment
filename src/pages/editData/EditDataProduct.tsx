@@ -93,10 +93,6 @@ export function EditDataProduct() {
       editeErrorProduct.title = "Պարտադիր դաշտ";
       setEditeErrorProduct({ ...editeErrorProduct });
     }
-    else if (editeProduct["title"].length < 18) {
-      editeErrorProduct.title = "Նվազագույնը 18 հայատառ նիշ";
-      setEditeErrorProduct({ ...editeErrorProduct })
-    }
     else if (editeProduct["title"].length > 150) {
       editeErrorProduct.title = "Առավելագույնը 150 հայատառ նիշ";
       setEditeErrorProduct({ ...editeErrorProduct })
@@ -138,7 +134,7 @@ export function EditDataProduct() {
       setEditeErrorProduct({ ...editeErrorProduct, img: "Ներբեռնեք նկարը" });
     }
        
-    if (Object.keys(regCheck).length + 1 == 4 && check == 4) {
+    if (!(Object.keys(editeErrorProduct).length)  && check == 4) {
       dispatch(editeAProduct(editeProduct));
       navigate("/homeFullInfo");
     }
