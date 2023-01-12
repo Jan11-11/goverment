@@ -1,25 +1,23 @@
-import {createAsyncThunk} from "@reduxjs/toolkit";
-import {addMember, deleteMember,editeMember} from "../slices/GovernmetMembersFullInfo";
-import {addMember1,deleteMember1,editeMember1} from "../slices/GovernmentMembers";
-import {Simulate} from "react-dom/test-utils";
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { addMember, deleteMember, editeMember } from "../slices/GovernmetMembersFullInfo";
+import { addMember1, deleteMember1, editeMember1 } from "../slices/GovernmentMembers";
+import { Simulate } from "react-dom/test-utils";
 import error = Simulate.error;
 
-
-
-interface IDelete{
-    id:number | null | undefined
+interface IDelete {
+    id: number | null | undefined
 }
 
-type MyEdite= Record<string | number, string | string>;
+type MyEdite = Record<string | number, string | string>;
 
-interface IMember{
-    [key:string]:string |number
+interface IMember {
+    [key: string]: string | number
 }
-export const addProduct=createAsyncThunk (
+export const addProduct = createAsyncThunk(
     "add",
-    async (item:IMember,{dispatch})=>{
+    async (item: IMember, { dispatch }) => {
         console.log(item)
-        const fullMember={
+        const fullMember = {
             "img": item.img,
             "title_key": "Պաշտոն։",
             "title": item.title,
@@ -32,53 +30,44 @@ export const addProduct=createAsyncThunk (
             "trash_logo": "https://cdn-icons-png.flaticon.com/128/3641/3641637.png",
             "trash_str": "Ջնջել"
         }
-        const member={
-            fullName:item.fullName,
-            title:item.title
+        const member = {
+            fullName: item.fullName,
+            title: item.title
         }
-       const respons1=await fetch("http://localhost:3000/membersInfo",{
-                method:"POST",
-                headers:{"content-type":"application/json"},
-                body:JSON.stringify(member)
-            });
-        const data1=await respons1.json();
-
-
-        const response=  await  fetch("http://localhost:3000/membersFullInfo",{
-            method:"POST",
-            headers:{"content-type":"application/json"},
-            body:JSON.stringify(fullMember)
+        const respons1 = await fetch("http://localhost:3000/membersInfo", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(member)
+        });
+        const data1 = await respons1.json();
+        const response = await fetch("http://localhost:3000/membersFullInfo", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(fullMember)
         })
-        const data=await response.json();
+        const data = await response.json();
         dispatch(addMember(data));
         dispatch(addMember1(data1));
     }
 );
 
-export  const deleteProduct=createAsyncThunk(
+export const deleteProduct = createAsyncThunk(
     "delete/Product",
-    async (id:IDelete,{dispatch})=>{
-        const response1=await fetch(`http://localhost:3000/membersInfo/${id}`,{method:"DELETE"});
-        const response= await fetch(`http://localhost:3000/membersFullInfo/${id}`,{method:"DELETE"});
-        const data1=await response1.json();
-        const data=await response.json();
+    async (id: IDelete, { dispatch }) => {
+        const response1 = await fetch(`http://localhost:3000/membersInfo/${id}`, { method: "DELETE" });
+        const response = await fetch(`http://localhost:3000/membersFullInfo/${id}`, { method: "DELETE" });
+        const data1 = await response1.json();
+        const data = await response.json();
         dispatch(deleteMember(id));
         dispatch(deleteMember1(id));
     }
 )
 
-
-///edit
-/*{ method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({completed:!item.completed}) })
-if (!response.ok) {
-    throw new Error("Can't complete this item");
-}*/
-
-export const editeAProduct=createAsyncThunk(
+export const editeAProduct = createAsyncThunk(
     "edite/Product",
-    async (item:MyEdite,{rejectWithValue,dispatch})=>{
+    async (item: MyEdite, { rejectWithValue, dispatch }) => {
 
-        const fullMember={
+        const fullMember = {
             "img": item.img,
             "title_key": "Պաշտոն։",
             "title": item.title,
@@ -91,37 +80,32 @@ export const editeAProduct=createAsyncThunk(
             "trash_logo": "https://cdn-icons-png.flaticon.com/128/3641/3641637.png",
             "trash_str": "Ջնջել"
         }
-        const member={
-            fullName:item.fullName,
-            title:item.title
+        const member = {
+            fullName: item.fullName,
+            title: item.title
         }
-
         try {
-            const response=await fetch(`http://localhost:3000/membersInfo/${item.id}`,{method:"PUT", headers:{"content-type":"application/json"},body:JSON.stringify(member)});
-            const response1=await fetch(`http://localhost:3000/membersFullInfo/${item.id}`,{method:"PUT", headers:{"content-type":"application/json"},body:JSON.stringify(fullMember)});
-            const data=await response.json();
-            const data1=await response1.json();
-            // console.log(data);
-            // console.log(data1);
+            const response = await fetch(`http://localhost:3000/membersInfo/${item.id}`, { method: "PUT", headers: { "content-type": "application/json" }, body: JSON.stringify(member) });
+            const response1 = await fetch(`http://localhost:3000/membersFullInfo/${item.id}`, { method: "PUT", headers: { "content-type": "application/json" }, body: JSON.stringify(fullMember) });
+            const data = await response.json();
+            const data1 = await response1.json();
             dispatch(editeMember(data1));
             dispatch(editeMember1(data));
 
-            if (!response.ok){
+            if (!response.ok) {
                 throw new Error("Can't edite this item")
             }
-
         }
-        catch (error:any) {
+        catch (error: any) {
             rejectWithValue(error.message)
         }
     }
 )
 
-
-export const DeleteProduct=createAsyncThunk(
+export const DeleteProduct = createAsyncThunk(
     "delete/Member",
-    async  (id)=>{
-        await fetch(`http://localhost:3000/membersInfo/${id}`,{method:"DELETE"});
-        await fetch(`http://localhost:3000/membersFullInfo/${id}`,{method:"DELETE"})
+    async (id) => {
+        await fetch(`http://localhost:3000/membersInfo/${id}`, { method: "DELETE" });
+        await fetch(`http://localhost:3000/membersFullInfo/${id}`, { method: "DELETE" })
     }
 )

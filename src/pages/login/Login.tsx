@@ -14,7 +14,8 @@ interface ILogin {
      const [loginError, setLoginError] = useState<ILogin>({});
      const [password, setPassword] = useState<ILogin>({});
      const [passwordError, setPasswordError] = useState<ILogin>({});
-     const [show, setShow] = useState(false);
+     
+     const [active, setActive] = useState(false)
 
 
 
@@ -94,8 +95,10 @@ interface ILogin {
                              </div>
                              <div id="loginFormChildCheckbox" className="loginFormCheckbox">
                                  <div id="loginFormCheckboxChild" className="loginFormCheckboxChild">
-                                    <div className="remcheck"> <input type="checkbox"/>
-                                     <label>Հիշել</label>
+                                    <div className="remcheck"> <input type="checkbox" onClick={(e)=>{
+                                        setActive(!active)
+                                    }}/>
+                                     <label id={active?"unCheked":"saveCheck"}>Հիշել</label>
                                      </div>
                                  </div>
                              </div>

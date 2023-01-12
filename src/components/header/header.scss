@@ -1,92 +1,11 @@
-//@mixin header{
-//  width: 100%;
-//  margin: 0 auto;
-//  background-color: #2C3034;
-//}
-//
-//@mixin headerContainer{
-//  max-width: 1200px;
-//  margin: 0 auto;
-//  display: flex;
-//  justify-content: space-between;
-//  align-items: center;
-//  height:90px
-//
-//}
-//
-//@mixin headerContainerH5{
-//  margin-left: 13px;
-//  font-size: 18px;
-//  font-family: "Arian AMU";
-//  line-height: 21px;
-//  ont-style: normal;
-//  font-weight: 700;
-//  color: #FFFFFF;
-//  margin-right: 17px;
-//}
-//
-//@mixin headerContainerH6 {
-//  font-family: 'Segoe UI';
-//  font-style: normal;
-//  font-weight: 400;
-//  font-size: 14px;
-//  line-height: 19px;
-//  color: #FFFFFF;
-//}
-//
-//.header{
-//  @include header;
-//}
-//
-//.headerContainer{
-//  @include headerContainer;
-//  div{
-//    display: flex;
-//    align-items: center;
-//  }
-//
-//  h5{
-//    @include headerContainerH5
-//  }
-//
-//  h6{
-//    @include  headerContainerH6;
-//  }
-//}
-//
-//@media (min-width: 900px) and (max-width: 1199px){
-//  .headerContainer{
-//    width: 95%;
-//    margin: 0 auto;
-//    h5{
-//      font-size: 14px;
-//    }
-//  }
-//}
-//
-//@media (min-width: 320px) and (max-width: 899px){
-//  .headerContainer{
-//    width: 95%;
-//    margin: 0 auto;
-//    h5{
-//      font-size: 16px;
-//    }
-//    h6{
-//      font-size: 14px;
-//      text-align: center;
-//    }
-//  }
-//}
-
-
-@mixin header{
+@mixin header {
   width: 100%;
   margin: 0 auto;
   background-color: #2C3034;
 }
 
-@mixin headerContainer{
-  max-width: 1200px;
+@mixin headerContainer {
+ max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -94,9 +13,7 @@
   padding: 20px 0px;
 }
 
-
-
-@mixin headerContainerH5{
+@mixin headerContainerH5 {
   margin-left: 13px;
   font-size: 18px;
   font-family: "Arian AMU";
@@ -104,7 +21,6 @@
   ont-style: normal;
   font-weight: 700;
   color: #FFFFFF;
-
 }
 
 @mixin headerContainerH6 {
@@ -114,81 +30,72 @@
   font-size: 14px;
   line-height: 19px;
   color: #FFFFFF;
-  margin-left:12px;
+  margin-left: 12px;
 }
 
-
-
-.header{
+.header {
   @include header;
 }
 
-.headerContainer{
+.headerContainer {
   @include headerContainer;
-  div{
+
+  div {
     display: flex;
     align-items: center;
   }
 
-  .headerVectorPart{
-    width:120px
+  .headerVectorPart {
+    width: 120px
   }
 
-  h5{
+  h5 {
     @include headerContainerH5
   }
 
-  h6{
-    @include  headerContainerH6;
+  h6 {
+    @include headerContainerH6;
   }
 }
 
-@media (max-width:891px) and (min-width:769px){
-  #headerContainerH5{
+@media (max-width:891px) and (min-width:769px) {
+  #headerContainerH5 {
     font-size: 18px;
   }
 
-  #headerContainerH6{
+  #headerContainerH6 {
     font-size: 14px;
     margin: 8px;
-
   }
-
-
-
 }
-
 
 @media (max-width:769px) and (min-width:646px) {
-  #headerContainerH5{
+  #headerContainerH5 {
     font-size: 18px;
   }
 
-  #headerContainerH6{
+  #headerContainerH6 {
     font-size: 14px;
     margin: 8px;
-
   }
 
-  .headerContainer{
+  .headerContainer {
     height: 60px;
   }
 
 }
 
-@media (max-width:646px)  {
-  #headerContainerH5{
+@media (max-width:646px) {
+  #headerContainerH5 {
     font-size: 12px;
   }
 
-  #headerContainerH6{
+  #headerContainerH6 {
     font-size: 14px;
     margin: 8px;
-
   }
 
-  .headerContainer{
+  .headerContainer {
     height: 60px;
   }
-
 }

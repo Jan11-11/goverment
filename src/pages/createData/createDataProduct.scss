@@ -1,7 +1,6 @@
 @use "sass:math";
 
 .createData {
-  // height: 1000px;
   overflow-x: hidden;
   font-family: "Segoe UI";
 }
@@ -10,7 +9,6 @@
   width: 85%;
   margin: 0 auto;
 }
-
 
 .pageTitle {
   width: 100%;
@@ -27,7 +25,6 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-
 
   .createimg {
     width: 36%;
@@ -52,7 +49,6 @@
     width: 60%;
     position: relative;
 
-
     .createInput {
       width: 100%;
       position: relative;
@@ -64,53 +60,41 @@
           width: 100%;
           font-weight: 400;
           font-size: 14px;
-
         }
 
         input {
           width: 100%;
           padding: 12px 2px;
           border: 1px solid #0B1219;
-
         }
       }
 
       .createInfo {
         width: 100%;
-        // margin-top: 62px;
         position: relative;
 
         label {
           width: 100%;
           font-weight: 400;
           font-size: 14px;
-
         }
 
         input {
           width: 100%;
           padding-bottom: 20%;
-
-
         }
       }
-
     }
-
 
     .buttons {
       display: flex;
       justify-content: flex-end;
-
-
-
 
       .removeBtn {
         border: 2px solid #06554D;
         background-color: #FFFFFF;
         padding: 12px 80px 16px 80px;
         font-size: 20px;
-
       }
 
       .addBtn {
@@ -123,9 +107,7 @@
       }
     }
 
-
     #leftBtn {
-
       margin-left: -1%;
       margin-top: 0;
 
@@ -136,13 +118,10 @@
   }
 }
 
-
-
 .imageErrorIcon {
   color: red;
   fill: red;
   filter: red;
-
 }
 
 .inputError {
@@ -188,35 +167,32 @@
   font-size: 14px;
   font-weight: 400;
   border: none;
-
 }
 
 #hideErrorMessage {
   display: none;
 }
 
+.imageErrorMessage {
+  color: red;
+}
+
 .imageError {
-  // width: 42%;
+  width: 42%;
   height: 0;
   border: 1px solid red;
 }
 
-@media (max-width:1071px) and (min-width:769px) {
-
+@media (max-width:1071px) and (min-width:905px) {
   #container {
     width: 90%;
     margin: 0 auto;
-
-
   }
 
   #createTitle {
     width: 100%;
     font-size: 30px;
     font-weight: bold;
-
-
-
   }
 
   #createpage {
@@ -225,17 +201,11 @@
     flex-wrap: no-wrap;
     justify-content: center;
     margin-top: 36px;
-
-
-
   }
 
   #createImage {
     width: 70%;
   }
-
-
-
 
   #create {
     width: 80%;
@@ -245,7 +215,6 @@
   #createInput {
     width: 100%;
     margin-top: 20px;
-
   }
 
   #createName {
@@ -273,27 +242,108 @@
 
   #buttons {
     width: 100%;
-    margin-left: 6%;
+    margin-left: 5%;
     margin-top: 20px;
-
 
     #removeBtn {
       width: 45%;
-      padding: 6px 25px 10px 25px;
+      padding: 9px 25px 10px 25px;
       font-size: 18px;
     }
 
     #addBtn {
       width: 45%;
-      padding: 6px 24px 10px 24px;
+      padding: 9px 24px 10px 24px;
       font-size: 18px;
     }
   }
 
-
+  #leftBtn {
+    left: -93%;
+    top: 90%;
+  }
 }
 
-//537  440
+@media (max-width:905px) and (min-width:769px) {
+  #container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #createTitle {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #createpage {
+    width: 100%;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    margin-top: 36px;
+  }
+
+  #createImage {
+    width: 70%;
+  }
+
+  #create {
+    width: 80%;
+    margin-left: 3%;
+  }
+
+  #createInput {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #createName {
+
+    width: 100%;
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  #createInfo {
+    width: 100%;
+    margin-top: 10%;
+
+    input {
+      padding-bottom: 25%;
+    }
+  }
+  #buttons {
+    width: 100%;
+    margin-left: 3%;
+    margin-top: 20px;
+
+    #removeBtn {
+      width: 45%;
+      padding: 9px 25px 10px 25px;
+      font-size: 18px;
+    }
+
+    #addBtn {
+      width: 45%;
+      padding: 9px 24px 10px 24px;
+      font-size: 18px;
+    }
+  }
+
+  #leftBtn {
+    left: -93%;
+    top: 92%;
+  }
+
+}
 
 @media (max-width:537px) {
   #buttons {
@@ -303,15 +353,10 @@
   }
 }
 
-
-@media (max-width:769px) and (min-width:505px) {
-
-
+@media (max-width:769px) and (min-width:579px) {
   #container {
     width: 90%;
     margin: 0 auto;
-
-
   }
 
   #createTitle {
@@ -319,12 +364,11 @@
     font-size: 28px;
     font-weight: bold;
     text-align: center;
-
-
   }
-    #createImage {
-      width: 70%;
-    }
+
+  #createImage {
+    width: 70%;
+  }
 
   #createpage {
     width: 100%;
@@ -344,7 +388,6 @@
 
   #create {
     width: 70%;
-
   }
 
   #createInput {
@@ -375,7 +418,6 @@
     margin-top: 20px;
     margin-left: 2%;
 
-
     #removeBtn {
       width: 45%;
       padding: 6px 27px 10px 27px;
@@ -397,15 +439,96 @@
 
 }
 
-
-@media (max-width:509px) {
-
-
+@media (max-width:579px) and (min-width:505px) {
   #container {
     width: 90%;
     margin: 0 auto;
+  }
 
+  #createTitle {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+  }
 
+  #createImage {
+    width: 70%;
+  }
+
+  #createpage {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 66px
+  }
+
+  #createimg {
+    width: 70%;
+  }
+
+  #imageError {
+    width: 70%;
+  }
+
+  #create {
+    width: 70%;
+  }
+
+  #createInput {
+    width: 100%;
+  }
+
+  #createName {
+    margin-top: 49px;
+    width: 100%;
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  #createInfo {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  #buttons {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 1%;
+
+    #removeBtn {
+      width: 45%;
+      padding: 6px 27px 10px 27px;
+      font-size: 17px;
+    }
+
+    #addBtn {
+      width: 45%;
+      padding: 6px 24px 10px 24px;
+      font-size: 17px;
+    }
+  }
+
+  #leftBtn {
+    margin-top: 7%;
+    margin-left: 0%;
+    z-index: 60;
+  }
+
+}
+
+@media (max-width:509px) {
+  #container {
+    width: 90%;
+    margin: 0 auto;
   }
 
   #createTitle {
@@ -413,8 +536,6 @@
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-
-
   }
 
   #createpage {
@@ -430,9 +551,10 @@
     margin-top: -40px;
 
   }
-    #createImage {
-      width: 100%;
-    }
+
+  #createImage {
+    width: 100%;
+  }
 
   #imageError {
     width: 100%;
@@ -467,8 +589,8 @@
 
   #buttons {
     width: 100%;
-    margin-top: 10px;
-    margin-left: -20%;
+    margin-top: 20px;
+    margin-left: 1%;
 
     #removeBtn {
       width: 45%;
@@ -486,10 +608,6 @@
   #leftBtn {
     margin-top: 3%;
     margin-left: 5%;
-
   }
-
-
-
 
 }

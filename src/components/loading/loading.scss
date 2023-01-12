@@ -18,7 +18,6 @@
     }
 }
 
-
 .txt {
     width: 100%;
     font-family: 'Arian AMU';
@@ -30,27 +29,27 @@
     margin-top: 36px;
 }
 
-@media (max-width:760px){
-    #txt{
+@media (max-width:760px) {
+    #txt {
         font-size: 40px;
     }
 }
 
-@media (max-width:605px){
-    #txt{
+@media (max-width:605px) {
+    #txt {
         font-size: 35px;
     }
 }
 
-@media (max-width:320px ) and (min-width:480px){
-    #txt{
+@media (max-width:320px) and (min-width:480px) {
+    #txt {
         font-size: 30xp;
-
     }
 
-    #gerb{
+    #gerb {
         width: 100%;
-        img{
+
+        img {
             width: 163px;
             height: 154px;
         }

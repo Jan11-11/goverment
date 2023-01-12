@@ -14,7 +14,7 @@ $normal: "normal";
 
 .login {
   height: 100vh;
-  background-image: url(../../../government/fon.png);
+  background-image: url(../../../../government/fon.png);
 }
 
 @mixin main {
@@ -34,8 +34,6 @@ $normal: "normal";
   flex-wrap: wrap;
   overflow: hidden;
 }
-
-
 
 @mixin loginImage {
   width: 55.5%;
@@ -77,12 +75,6 @@ $normal: "normal";
   right: 0px;
   display: flex;
   justify-content: space-between;
-  
-
-}
-
-#remcheck{
-  margin: 5px;
 }
 
 @mixin loginFormChildInput {
@@ -133,8 +125,6 @@ $normal: "normal";
   transition: 0.1s all linear;
 }
 
-
-
 .main {
   @include main
 }
@@ -142,8 +132,6 @@ $normal: "normal";
 .container {
   @include container;
 }
-
-
 
 .containerMain {
   @include containerMain;
@@ -201,10 +189,7 @@ $normal: "normal";
   .loginFormCheckboxChild {
     @include loginFormCheckboxChild;
 
-    input[type="checkbox"] {
-      accent-color: black;
-
-    }
+    input[type="checkbox"] {}
   }
 
   label {
@@ -215,15 +200,26 @@ $normal: "normal";
 .loginFormButton {
   @include loginFormButton
 }
-#loginError1{
+
+#loginError1 {
   border: 2px solid red !important;
 }
-.loginError1{
- border: 2px solid red !important;
+
+.loginError1 {
+  border: 2px solid red !important;
 }
 
+.remcheck {
+  color: #06554D;
+}
 
+#saveCheck {
+  color: #06554D;
+}
 
+#unCheked {
+  color: #E1AA5A;
+}
 
 .login_p {
   height: 0;
@@ -251,24 +247,73 @@ $normal: "normal";
   width: 100%;
   height: 44px;
 }
-.loginFormCheckboxChild{
-  input[type="checkbox"]:checked{
-    background: #E1AA5A !important;
-    color: white !important;
+
+.loginFormCheckboxChild {
+  input[type="checkbox"]:checked {
+    accent-color: #E1AA5A !important;
+
   }
-    input[type='checkbox']::after {
-      box-shadow: none !important;
-    }
+
+  input[type='checkbox']::after {
+    box-shadow: none !important;
+  }
 }
-#loginFormChildButton:hover{
+
+#loginFormChildButton:hover {
   cursor: pointer;
-  background-color:#E1AA5A ;
+  background-color: #E1AA5A;
 }
-#loginFormChildButton:active{
+
+#loginFormChildButton:active {
   background: #9E9E9E;
 }
 
-@media (max-width:768px) and (min-width:320px) {
+@media(max-width:955px) and (min-width:768px) {
+  .login_p {
+    font-size: 10px;
+  }
+
+  .password_p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width:768px) and (min-width:393px) {
+  .container {
+    padding: 0px;
+   }
+
+  .loginImage {
+    width: 100%;
+
+  }
+
+  .loginForm {
+    width: 100%;
+  }
+
+  #loginFormChildLogin {
+    width: 83%;
+  }
+
+  #loginFormChildPassword {
+    width: 83%;
+  }
+
+  #loginFormChildCheckbox {
+    width: 83%;
+  }
+
+  #loginFormChildButton {
+    width: 83%;
+  }
+
+  .loginFormTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width:393px) and (min-width:320px) {
   .container {
     padding: 0px;
 
@@ -291,7 +336,6 @@ $normal: "normal";
     width: 83%;
   }
 
-
   #loginFormChildCheckbox {
     width: 83%;
   }
@@ -300,11 +344,16 @@ $normal: "normal";
     width: 83%;
   }
 
- 
-
   .loginFormTitle {
     font-size: 22px;
   }
 
-  
+  .login_p {
+    font-size: 10px;
+  }
+
+  .password_p {
+    font-size: 10px;
+  }
+
 }

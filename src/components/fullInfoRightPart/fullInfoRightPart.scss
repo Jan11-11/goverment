@@ -1,22 +1,19 @@
-@mixin memberRightPart{
+@mixin memberRightPart {
   width: 17%;
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin deactivate{
-  background-color:#c3c3c3;
+@mixin deactivate {
+  background-color: #c3c3c3;
 }
 
-
-
-
 //medium
-@mixin memberRightPartMedium{
+@mixin memberRightPartMedium {
   position: absolute;
   background-color: white;
   width: 89%;
-  left:5.5%;
+  left: 5.5%;
   bottom: 22%;
   display: flex;
   flex-wrap: wrap;
@@ -31,20 +28,20 @@
   padding: 20% 0 2% 0;
 }
 
-@mixin memberRightPartActivePMedium{
+@mixin memberRightPartActivePMedium {
   width: 60%;
 }
 
-@mixin groupPassiveMedium{
+@mixin groupPassiveMedium {
   display: inline;
   position: absolute;
   right: -2%;
-  top:10%
+  top: 10%
 }
 
-@mixin editeAndTrashMedium{
+@mixin editeAndTrashMedium {
   width: 90%;
-  margin:0 auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 8px 0px 10px 0px;
@@ -52,11 +49,11 @@
 }
 
 //Tablet
-@mixin memberRightPartTablet{
+@mixin memberRightPartTablet {
   position: absolute;
   background-color: white;
   width: 94%;
-  left:3%;
+  left: 3%;
   bottom: 22%;
   display: flex;
   flex-wrap: wrap;
@@ -71,58 +68,55 @@
   padding: 20% 0 2% 0;
 }
 
-@mixin memberRightPartActivePTablet{
+@mixin memberRightPartActivePTablet {
   width: 60%;
 }
 
-@mixin groupPassiveTablet{
+@mixin groupPassiveTablet {
   display: inline;
   position: absolute;
   right: -2%;
-  top:10%
+  top: 10%
 }
 
-@mixin editeAndTrashTablet{
+@mixin editeAndTrashTablet {
   width: 90%;
-  margin:0 auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 8px 0px 10px 0px;
   border-top: 1px solid black;
 }
 
-
-.deactivate{
+.deactivate {
   @include deactivate
 }
 
-#memberAllParagraph{
+#memberAllParagraph {
   color: #9C9C9C;
 }
 
-#memberAllParagraph1{
+#memberAllParagraph1 {
   color: #9C9C9C;
 }
 
 //medium
-@mixin memberRightPartMedium{
+@mixin memberRightPartMedium {
   position: absolute;
   background-color: white;
   width: 86%;
-  left:7%;
+  left: 7%;
   bottom: 22%;
   display: flex;
   flex-wrap: wrap;
 }
 
-
-
 //small
-@mixin memberRightPart320_375{
+@mixin memberRightPart320_375 {
   position: absolute;
   background-color: white;
   width: 89%;
-  left:5.5%;
+  left: 5.5%;
   bottom: 22%;
   display: flex;
   flex-wrap: wrap;
@@ -137,34 +131,28 @@
   padding: 20% 0 2% 0;
 }
 
-@mixin memberRightPartActiveP320_375{
+@mixin memberRightPartActiveP320_375 {
   width: 60%;
 }
 
-@mixin groupPassive320_375{
+@mixin groupPassive320_375 {
   display: inline;
   position: absolute;
   right: -2%;
-  top:10%
+  top: 10%
 }
 
-@mixin editeAndTrash320_375{
+@mixin editeAndTrash320_375 {
   width: 90%;
-  margin:0 auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 8px 0px 10px 0px;
   border-top: 1px solid black;
 }
 
-
-
-
-
-
-
-@mixin memberRightPartHiden{
- display: none;
+@mixin memberRightPartHiden {
+  display: none;
 }
 
 @mixin memberRightPartMobile {
@@ -178,7 +166,7 @@
   background-color: white;
 }
 
-@mixin memberRightPartActiveMobile{
+@mixin memberRightPartActiveMobile {
   position: relative;
   width: 90%;
   display: flex;
@@ -188,7 +176,7 @@
   padding-bottom: 10px;
 }
 
-@mixin memberRightPartActiveMobileP{
+@mixin memberRightPartActiveMobileP {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.04em;
@@ -196,24 +184,24 @@
   width: 50%;
 }
 
-@mixin  memberRightPartEditTrashMobile {
+@mixin memberRightPartEditTrashMobile {
   width: 90%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 
-@mixin memberRightPartEditTrashPMobile{
+@mixin memberRightPartEditTrashPMobile {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.04em;
 }
 
-@mixin memberRightPartHidenMobile{
+@mixin memberRightPartHidenMobile {
   display: none;
 }
 
-@mixin active{
+@mixin active {
   width: 100%;
   margin-bottom: 40%;
   height: 10%;
@@ -223,18 +211,18 @@
   cursor: pointer;
 }
 
-@mixin iconSize{
+@mixin iconSize {
   width: 11px;
   height: 11px;
   padding-bottom: 2px;
 }
 
-@mixin switch_img{
+@mixin switch_img {
   width: 26px;
   padding-bottom: 3px;
 }
 
-@mixin activeP{
+@mixin activeP {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: 400;
@@ -246,7 +234,7 @@
   color: #0B1219;
 }
 
-@mixin editTrash{
+@mixin editTrash {
   width: 100%;
   height: 15%;
   display: flex;
@@ -255,7 +243,7 @@
   cursor: pointer;
 }
 
-@mixin editTrashP{
+@mixin editTrashP {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: 400;
@@ -266,176 +254,172 @@
   width: 100%;
 }
 
-@mixin group{
+@mixin group {
   width: 20px;
   height: 30px;
   position: absolute;
-  bottom:8px;
+  bottom: 8px;
   right: 8px;
 }
 
-@mixin groupHiden{
+@mixin groupHiden {
   display: none;
 }
 
-@mixin groupPassive{
+@mixin groupPassive {
   position: absolute;
-  right:0px;
-  top:-30px;
+  right: 0px;
+  top: -30px;
 }
 
-.groupPassive{
+.groupPassive {
   display: none;
 }
 
-.iconDisabled{
+.iconDisabled {
   pointer-events: none;
 }
 
-.memberRightPart{
+.memberRightPart {
   @include memberRightPart;
 }
 
-
-
-
-.groupHiden{
+.groupHiden {
   @include groupHiden;
 }
 
-
-.editTrash{
+.editTrash {
   @include editTrash;
+
   div {
     display: flex;
     align-items: center;
   }
 
-  .trash_logo{
+  .trash_logo {
     margin-left: 15%;
   }
 
-  .edite_img{
-    margin-right:5%;
+  .edite_img {
+    margin-right: 5%;
   }
 
-  .trash_img{
-    margin-right:8%;
-    background-colorred: red;
+  .trash_img {
+    margin-right: 8%;
   }
 
-  p{
+  p {
     @include editTrashP;
   }
 }
 
-.active_logos{
+.active_logos {
   margin-left: 5%;
 }
 
-#active1{
+#active1 {
   @include active;
-  p{
+
+  p {
     @include activeP;
   }
 }
 
-@media  (min-width: 841px) and (max-width: 1199px) {
-  .memberRightPart{
+@media (max-width: 1199px) and (min-width: 840px) {
+  .memberRightPart {
     width: 25%;
   }
 
-  #active1{
+  #active1 {
     margin-bottom: 31%;
   }
 }
 
-@media (min-width: 769px) and (max-width: 840px) {
-  .memberRightPart{
+@media (max-width:840px) and (min-width:768px) {
+  .memberRightPart {
     width: 25%;
   }
 }
 
-
-
 //Tablet
-@media (min-width: 426px) and (max-width: 768px) {
-  .memberRightPart{
+@media (max-width: 768px) and (min-width: 425px) {
+  .memberRightPart {
     @include memberRightPartTablet;
   }
 
-  #active1{
+  #active1 {
     @include memberRightPartActiveTablet;
-    p{
+
+    p {
       @include memberRightPartActivePTablet
     }
   }
 
-  #memberRightPartHiden{
+  #memberRightPartHiden {
     display: none;
   }
 
-  .editTrash{
+  .editTrash {
     @include editeAndTrashTablet;
   }
 
-  .groupPassive{
+  .groupPassive {
     @include groupPassiveTablet;
   }
 
 }
 
-
-
 //medium
-@media (min-width: 376px) and (max-width: 425px) {
-  .memberRightPart{
+@media (max-width: 425px) and (min-width: 375px) {
+  .memberRightPart {
     @include memberRightPartMedium;
   }
-  #active1{
+
+  #active1 {
     @include memberRightPartActiveMedium;
-    p{
+
+    p {
       @include memberRightPartActivePMedium
     }
   }
 
-  #memberRightPartHiden{
+  #memberRightPartHiden {
     display: none;
   }
 
-  .editTrash{
+  .editTrash {
     @include editeAndTrash320_375;
   }
 
-  .groupPassive{
+  .groupPassive {
     @include groupPassive320_375;
   }
 }
 
-
 //small
-@media (min-width: 320px) and (max-width: 375px) {
-  .memberRightPart{
+@media (max-width: 375px) and (min-width:320px) {
+  .memberRightPart {
     @include memberRightPart320_375;
   }
-  #active1{
+
+  #active1 {
     @include memberRightPartActive320_375;
-    p{
+
+    p {
       @include memberRightPartActiveP320_375
     }
   }
 
-  #memberRightPartHiden{
+  #memberRightPartHiden {
     display: none;
   }
 
-  .editTrash{
+  .editTrash {
     @include editeAndTrash320_375;
   }
 
-  .groupPassive{
+  .groupPassive {
     @include groupPassive320_375;
   }
-
 
 }

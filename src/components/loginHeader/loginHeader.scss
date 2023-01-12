@@ -1,14 +1,14 @@
-@mixin containerHeader{
+@mixin containerHeader {
   width: 53%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  margin: 0  auto 3rem auto;
-  
+  margin: 0 auto 3rem auto;
+
 }
 
-@mixin containerHeaderH1{
+@mixin containerHeaderH1 {
   font-family: 'Arian AMU';
   font-style: normal;
   font-weight: 700;
@@ -16,47 +16,41 @@
   line-height: 21px;
   color: #0B1219;
   margin: 16px
-  
-  
 }
 
-.containerHeader{
-  @include  containerHeader;
+.containerHeader {
+  @include containerHeader;
 }
 
-#containerHeaderH1{
-  @include  containerHeaderH1;
+#containerHeaderH1 {
+  @include containerHeaderH1;
 }
 
-
-@media (max-width:1198px) and (min-width:660px){
-  #containerHeaderH1{ 
-  min-width:456px;
+@media (max-width:1198px) and (min-width:660px) {
+  #containerHeaderH1 {
+    min-width: 456px;
   }
 }
 
-@media (max-width:661px) and (min-width:508px){
-  #containerHeaderH1{
-    font-size: 14px; 
-    min-width:360px;
+@media (max-width:661px) and (min-width:508px) {
+  #containerHeaderH1 {
+    font-size: 14px;
+    min-width: 360px;
     text-align: center;
-    
-    }
+  }
 }
 
-@media (max-width:508px){
-  #containerHeaderH1{
-    font-size: 12px; 
-    }
+@media (max-width:508px) {
+  #containerHeaderH1 {
+    font-size: 12px;
+  }
 
-    .containerHeader{
-      margin: -38px auto 0 auto;
-    }
+  .containerHeader {
+    margin: -38px auto 0 auto;
+  }
 
-    .containerMain{
-      margin-top: -40px;
-    }
-    
+  .containerMain {
+    margin-top: -40px;
+  }
 
 }
-

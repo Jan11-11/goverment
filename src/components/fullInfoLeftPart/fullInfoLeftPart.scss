@@ -4,33 +4,31 @@
   width: 75%;
 }
 
-@mixin memberLeftPartImage{
+@mixin memberLeftPartImage {
   width: 30%;
   height: 100%;
   margin-top: 15px;
   position: relative;
 }
 
-@mixin memberLeftPartDescription{
+@mixin memberLeftPartDescription {
   display: flex;
   flex-wrap: wrap;
   margin-left: 10%;
   width: 70%;
 }
 
-
-
-@mixin  memberLeftPartDescriptionChild {
+@mixin memberLeftPartDescriptionChild {
   width: 100%;
   display: flex;
-  text-align:left;
+  text-align: left;
   flex-wrap: wrap;
-  font-size:14px;
+  font-size: 14px;
   align-items: center;
   margin-bottom: 15px;
 }
 
-@mixin  memberLeftPartDescriptionChildParagraph{
+@mixin memberLeftPartDescriptionChildParagraph {
   width: 100%;
   padding-top: 2%;
   display: flex;
@@ -39,35 +37,28 @@
   font-weight: 700;
 }
 
-
-@mixin  memberLeftPartDescriptionChildSpan{
+@mixin memberLeftPartDescriptionChildSpan {
   font-weight: 200;
   font-size: 14px;
 }
 
-
-
 //LapTopMedium
-@mixin memberLeftPartDescriptionChildLapTopMedium{
+@mixin memberLeftPartDescriptionChildLapTopMedium {
   width: 100%;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
 }
-
-
-
-
 
 //Laptop
-@mixin memberLeftPartDescriptionChildLapTop{
+@mixin memberLeftPartDescriptionChildLapTop {
   width: 100%;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
 }
 
-@mixin memberLeftPartDescriptionChildParagraphLapTop{
+@mixin memberLeftPartDescriptionChildParagraphLapTop {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -77,7 +68,7 @@
   font-size: 14px;
 }
 
-@mixin memberLeftPartDescriptionChildSpanLapTop{
+@mixin memberLeftPartDescriptionChildSpanLapTop {
   width: 100%;
   display: flex;
   text-align: left;
@@ -86,9 +77,7 @@
   font-size: 14px;
 }
 
-
-
-@mixin memberLeftPartDescriptionP{
+@mixin memberLeftPartDescriptionP {
   width: 100%;
   display: flex;
   align-items: center;
@@ -103,50 +92,49 @@
   color: #0B1219;
 }
 
-
 //Tablet
-@mixin memberLeftPartTablet{
+@mixin memberLeftPartTablet {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin: 3px auto;
 }
 
-@mixin memberLeftPartImageTablet{
+@mixin memberLeftPartImageTablet {
   width: 100%;
   display: flex;
-  margin: 16px ;
+  margin: 16px;
   position: relative;
 }
 
-@mixin memberLeftPartImageGroupTablet{
+@mixin memberLeftPartImageGroupTablet {
   display: inline;
   position: absolute;
   right: 8px;
   bottom: 8px;
 }
 
-@mixin memberLeftPartImageGroupTablet{
+@mixin memberLeftPartImageGroupTablet {
   display: inline;
   position: absolute;
   right: 8px;
   bottom: 8px;
 }
 
-@mixin memberLeftPartDescriptionTablet{
+@mixin memberLeftPartDescriptionTablet {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin  memberLeftPartDescriptionChildTablet{
+@mixin memberLeftPartDescriptionChildTablet {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-@mixin memberContentLeftPartDescriptionPTablet{
+@mixin memberContentLeftPartDescriptionPTablet {
   font-size: 12px;
   width: 99%;
   margin: 0 auto;
@@ -156,58 +144,55 @@
   flex-wrap: wrap;
 }
 
-@mixin memberContentLeftPartDescriptionSpanTablet{
+@mixin memberContentLeftPartDescriptionSpanTablet {
   font-size: 12px;
   font-weight: 200;
   width: 99%;
 }
-
-
-
 
 //medium
-@mixin memberLeftPart376_425{
+@mixin memberLeftPart376_425 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin: 3px auto;
 }
 
-@mixin memberLeftPartImage376_425{
+@mixin memberLeftPartImage376_425 {
   width: 100%;
   display: flex;
-  margin: 16px ;
+  margin: 16px;
   position: relative;
 }
 
-@mixin memberLeftPartImageGroup375_425{
+@mixin memberLeftPartImageGroup375_425 {
   display: inline;
   position: absolute;
   right: 8px;
   bottom: 8px;
 }
 
-@mixin memberLeftPartImageGroup376_425{
+@mixin memberLeftPartImageGroup376_425 {
   display: inline;
   position: absolute;
   right: 8px;
   bottom: 8px;
 }
 
-@mixin memberLeftPartDescription376_425{
+@mixin memberLeftPartDescription376_425 {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin  memberLeftPartDescriptionChild376_425{
+@mixin memberLeftPartDescriptionChild376_425 {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-@mixin memberContentLeftPartDescriptionP376_425{
+@mixin memberContentLeftPartDescriptionP376_425 {
   font-size: 12px;
   width: 99%;
   margin: 0 auto;
@@ -217,13 +202,11 @@
   flex-wrap: wrap;
 }
 
-@mixin memberContentLeftPartDescriptionSpan376_425{
+@mixin memberContentLeftPartDescriptionSpan376_425 {
   font-size: 12px;
   font-weight: 200;
   width: 99%;
 }
-
-
 
 //small
 @mixin memberLeftPart320_375 {
@@ -233,34 +216,34 @@
   margin: 3px auto;
 }
 
-@mixin memberLeftPartImage320_375{
+@mixin memberLeftPartImage320_375 {
   width: 100%;
   display: flex;
-  margin: 16px ;
+  margin: 16px;
   position: relative;
 }
 
-@mixin memberLeftPartImageGroup320_375{
+@mixin memberLeftPartImageGroup320_375 {
   display: inline;
   position: absolute;
   right: 8px;
   bottom: 8px;
 }
 
-@mixin memberLeftPartDescription320_375{
+@mixin memberLeftPartDescription320_375 {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin  memberLeftPartDescriptionChild320_375 {
+@mixin memberLeftPartDescriptionChild320_375 {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-@mixin memberContentLeftPartDescriptionP320_375{
+@mixin memberContentLeftPartDescriptionP320_375 {
   font-size: 12px;
   width: 97%;
   margin: 0 auto;
@@ -268,58 +251,54 @@
   text-align: left;
   display: flex;
   flex-wrap: wrap;
-
 }
 
-@mixin memberContentLeftPartDescriptionSpan320_375{
+@mixin memberContentLeftPartDescriptionSpan320_375 {
   font-size: 12px;
   font-weight: 200;
   width: 100%;
 }
 
-
-@mixin memberLeftPartImageImg{
+@mixin memberLeftPartImageImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
   overflow: hidden;
 }
 
-.group{
+.group {
   display: none;
 }
 
-
-.imgPassive{
+.imgPassive {
   filter: saturate(0%);
 }
 
-#memberAllParagraph{
+#memberAllParagraph {
   color: #9C9C9C;
 }
 
-#memberAllParagraph1{
+#memberAllParagraph1 {
   color: #9C9C9C;
 }
 
-
-
-.memberLeftPart{
+.memberLeftPart {
   @include memberLeftPart;
 
-  .memberLeftPartDescription{
-    margin:0% 0 0 3%;
+  .memberLeftPartDescription {
+    margin: 0% 0 0 3%;
     height: 80%;
   }
 }
 
-.memberLeftPartDescriptionChild{
+.memberLeftPartDescriptionChild {
   @include memberLeftPartDescriptionChild
 }
 
-.memberLeftPartDescriptionChildParagraph{
+.memberLeftPartDescriptionChildParagraph {
   @include memberLeftPartDescriptionChildParagraph;
-  span{
+
+  span {
     font-size: 14px;
     font-weight: 200;
     margin-left: 6px;
@@ -328,170 +307,167 @@
 }
 
 //LepTopMedium
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .memberLeftPartDescriptionChild {
     @include memberLeftPartDescriptionChildLapTopMedium;
   }
-    .memberLeftPartDescriptionChildParagraph {
-      @include memberLeftPartDescriptionChildParagraphLapTop;
-    }
 
-    #memberLeftPartDescriptionChildSpan {
-      @include memberLeftPartDescriptionChildSpanLapTop
-    }
-  #memberLeftPartDescriptionChildSpan{
+  .memberLeftPartDescriptionChildParagraph {
+    @include memberLeftPartDescriptionChildParagraphLapTop;
+  }
+
+  #memberLeftPartDescriptionChildSpan {
+    @include memberLeftPartDescriptionChildSpanLapTop
+  }
+
+  #memberLeftPartDescriptionChildSpan {
     margin-left: 0px;
   }
 
 }
 
-
 //LapTopMedium
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .memberLeftPartDescriptionChild {
     @include memberLeftPartDescriptionChild
   }
 
-
-
   .memberLeftPartDescription {
     @include memberLeftPartDescription;
   }
-
 
   .memberLeftPart span {
     @include memberContentLeftPartDescriptionP320_375
   }
 }
 
-
-@media (min-width: 840px) and (max-width: 769px){
-  .memberLeftPart{
+@media (min-width: 840px) and (max-width: 768px) {
+  .memberLeftPart {
     width: 70%;
   }
-  #memberLeftPartDescriptionChildSpan{
+
+  #memberLeftPartDescriptionChildSpan {
     margin-left: 0px;
   }
 }
 
-
-//
-
 //Tablet
-@media (min-width: 426px) and (max-width: 768px) {
-  .memberLeftPart{
+@media (min-width: 425px) and (max-width: 768px) {
+  .memberLeftPart {
     @include memberLeftPartTablet;
   }
-  #memberLeftPartDescriptionChildSpan{
+
+  #memberLeftPartDescriptionChildSpan {
     margin-left: 0px;
   }
 
-
-
-  .memberLeftPartImage{
+  .memberLeftPartImage {
     @include memberLeftPartImageTablet;
-    .img{
+
+    .img {
       width: 100%;
       height: 100%;
     }
   }
 
-  .group{
+  .group {
     @include memberLeftPartImageGroupTablet;
   }
 
-  .memberLeftPartDescription{
+  .memberLeftPartDescription {
     @include memberLeftPartDescriptionTablet;
   }
 
-  .memberLeftPartDescriptionChild{
+  .memberLeftPartDescriptionChild {
     @include memberLeftPartDescriptionChildTablet;
   }
 
-  .memberLeftPartDescriptionChildParagraph{
+  .memberLeftPartDescriptionChildParagraph {
     @include memberContentLeftPartDescriptionPTablet;
-    span{
+
+    span {
       @include memberContentLeftPartDescriptionSpanTablet;
     }
   }
 }
 
-
-
 //medium
-@media (min-width: 376px) and (max-width: 425px) {
-  .memberLeftPart{
+@media (min-width: 375px) and (max-width: 425px) {
+  .memberLeftPart {
     @include memberLeftPart376_425;
   }
-  #memberLeftPartDescriptionChildSpan{
+
+  #memberLeftPartDescriptionChildSpan {
     margin-left: 0px;
   }
 
-  .memberLeftPartImage{
+  .memberLeftPartImage {
     @include memberLeftPartImage376_425;
-    .img{
+
+    .img {
       width: 100%;
       height: 100%;
     }
   }
 
-  .group{
+  .group {
     @include memberLeftPartImageGroup375_425;
   }
 
-  .memberLeftPartDescription{
+  .memberLeftPartDescription {
     @include memberLeftPartDescription376_425;
   }
 
-  .memberLeftPartDescriptionChild{
+  .memberLeftPartDescriptionChild {
     @include memberLeftPartDescriptionChild376_425;
   }
 
-  .memberLeftPartDescriptionChildParagraph{
+  .memberLeftPartDescriptionChildParagraph {
     @include memberContentLeftPartDescriptionP376_425;
-    span{
+
+    span {
       @include memberContentLeftPartDescriptionSpan376_425;
     }
   }
 }
 
-
-
 //small
 @media (min-width: 319px) and (max-width: 375px) {
-  .memberLeftPart{
+  .memberLeftPart {
     @include memberLeftPart320_375;
   }
 
-  #memberLeftPartDescriptionChildSpan{
+  #memberLeftPartDescriptionChildSpan {
     margin-left: 0px;
   }
 
-  .memberLeftPartImage{
-    @include  memberLeftPartImage320_375;
-    .img{
+  .memberLeftPartImage {
+    @include memberLeftPartImage320_375;
+
+    .img {
       width: 100%;
       height: 100%;
     }
 
   }
 
-  .group{
+  .group {
     @include memberLeftPartImageGroup320_375;
   }
-  .memberLeftPartDescription{
+
+  .memberLeftPartDescription {
     @include memberLeftPartDescription320_375;
   }
 
-  .memberLeftPartDescriptionChild{
+  .memberLeftPartDescriptionChild {
     @include memberContentLeftPartDescriptionP320_375;
   }
 
-  .memberLeftPartDescriptionChildParagraph{
+  .memberLeftPartDescriptionChildParagraph {
     @include memberContentLeftPartDescriptionP320_375;
   }
 
-  #memberLeftPartDescriptionChildSpan{
+  #memberLeftPartDescriptionChildSpan {
     @include memberContentLeftPartDescriptionSpan320_375
   }
 }

@@ -1,81 +1,75 @@
-@mixin  member{
+@mixin member {
   position: relative;
   max-width: 1200px;
   margin: 15px auto;
-  background-color:  #E8E8E8;
+  background-color: #E8E8E8;
   display: flex;
   z-index: -200;
   align-items: center;
 }
 
-@mixin memberActive{
+@mixin memberActive {
   position: relative;
   z-index: -200;
 }
 
-
 //Tablet
-@mixin memberTablet{
+@mixin memberTablet {
   position: relative;
   width: 95%;
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin memberContentTablet{
+@mixin memberContentTablet {
   position: relative;
   width: 100%;
 }
-
-
 
 //medium
-@mixin member376_425{
+@mixin member376_425 {
   position: relative;
   width: 95%;
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin memberContent376_425{
+@mixin memberContent376_425 {
   position: relative;
   width: 100%;
 }
-
-
 
 //small
-@mixin member320_375{
+@mixin member320_375 {
   position: relative;
   width: 95%;
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin memberContent320_375{
+@mixin memberContent320_375 {
   position: relative;
   width: 100%;
 }
 
-
-@mixin  member900{
+@mixin member900 {
   width: 95%;
   margin: 7px auto;
 }
 
-@mixin memberContent{
+@mixin memberContent {
   width: 97%;
-  margin:16px auto 13px auto;
+  margin: 16px auto 13px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-@mixin p{
+@mixin p {
   height: 65%;
 }
 
-@mixin title{
+@mixin title {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: 700;
@@ -86,8 +80,7 @@
   color: #0B1219;
 }
 
-
-@mixin memberMobile{
+@mixin memberMobile {
   position: relative;
   width: 95%;
   margin: 6px auto;
@@ -95,80 +88,72 @@
   flex-wrap: wrap;
 }
 
-@mixin memberContentMobile{
+@mixin memberContentMobile {
   display: flex;
   flex-wrap: wrap;
   width: 85%;
   margin: 0 auto;
 }
 
-
-
-  .member{
-  @include  member;
+.member {
+  @include member;
 }
 
-.memberContent{
+.memberContent {
   @include memberContent
 }
 
- .title{
-    @include title;
-  }
+.title {
+  @include title;
+}
 
-@media  (min-width: 900px) and (max-width: 1199px) {
-  .member{
+@media (min-width: 900px) and (max-width: 1199px) {
+  .member {
     @include member900;
   }
 }
 
 @media (min-width: 320px) and (max-width: 900px) {
-  .member{
+  .member {
     width: 95%;
   }
 }
 
 @media (min-width: 900px) and (max-width: 1099px) {
-  .titleDegree{
+  .titleDegree {
     width: 100%;
   }
 }
 
 //Tablet
 @media (min-width: 426px) and (max-width: 768px) {
-  .member{
+  .member {
     @include memberTablet;
   }
 
-  .memberContent{
+  .memberContent {
     @include memberContentTablet
   }
 }
 
-
 //medium
 @media (max-width:376px) and (max-width: 425px) {
-  .member{
+  .member {
     @include member376_425;
   }
 
-  .memberContent{
+  .memberContent {
     @include memberContent376_425
   }
 }
 
 //SMALL
-@media (min-width: 320px) and (max-width: 375px){
-  .member{
-   @include member320_375;
+@media (min-width: 320px) and (max-width: 375px) {
+  .member {
+    @include member320_375;
   }
 
-  .memberContent{
+  .memberContent {
     @include memberContent320_375;
   }
 }
-
-
-
-
-

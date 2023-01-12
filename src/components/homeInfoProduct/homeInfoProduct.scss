@@ -1,6 +1,3 @@
-
-
-
 @mixin member {
   width: 100%;
   margin: 1.5% 0;
@@ -9,7 +6,7 @@
   z-index: 1 !important;
 }
 
-@mixin memberTitle{
+@mixin memberTitle {
   width: 100%;
   height: 132px;
   display: flex;
@@ -17,7 +14,7 @@
   background-color: white;
 }
 
-@mixin memberTitleP{
+@mixin memberTitleP {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,8 +27,6 @@
   text-align: center;
   letter-spacing: 0.05em;
   color: #0B121A;
-
-
 }
 
 @mixin memberName {
@@ -44,7 +39,7 @@
   background-color: #06554D;
 }
 
-@mixin memberNameH5{
+@mixin memberNameH5 {
   display: flex;
   font-family: 'Segoe UI';
   font-style: normal;
@@ -56,36 +51,33 @@
 
 }
 
-#members{
+#members {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(132px, 1fr));
   gap: 1px 10px;
 }
 
-
-  .member {
-
+.member {
   @include member;
-  }
+}
 
 .memberName {
   @include memberName;
 }
 
-.memberNameH5{
+.memberNameH5 {
   @include memberNameH5
 }
 
-.memberTitle{
+.memberTitle {
   @include memberTitle;
 }
 
-#memberTitleP{
+#memberTitleP {
   @include memberTitleP
 }
 
-#memberTitle{
+#memberTitle {
   @include memberTitle;
 }
-

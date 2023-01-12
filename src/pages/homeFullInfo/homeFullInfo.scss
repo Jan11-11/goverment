@@ -1,27 +1,26 @@
-@mixin mainTitle{
+@mixin mainTitle {
   position: relative;
 }
-
-@mixin main{
+@mixin main {
   padding-bottom: 2px;
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-@mixin addMember{
+@mixin addMember {
   width: 95%;
   position: relative;
   display: flex;
   justify-content: right;
 }
 
-@mixin mainTitleButton{
+@mixin mainTitleButton {
   width: 12%;
   display: flex;
   position: absolute;
   right: -4%;
-  top:-15px;
+  top: -15px;
   justify-content: space-between;
   align-items: center;
   font-family: 'Segoe UI';
@@ -30,22 +29,22 @@
   font-size: 18px;
   line-height: 24px;
   color: #06554D;
-  border:none;
+  border: none;
   background-color: inherit;
   cursor: pointer;
 }
 
-@mixin mainTitleButtonLapTop{
+@mixin mainTitleButtonLapTop {
   right: -2%;
-  top:-19px
+  top: -19px
 }
 
-@mixin mainConfirmHidden{
+@mixin mainConfirmHidden {
   display: none;
 }
 
-@mixin mainH1{
-  padding:20px 0px 25px 0px;
+@mixin mainH1 {
+  padding: 20px 0px 25px 0px;
   font-family: 'Arian AMU';
   font-style: normal;
   font-weight: 700;
@@ -56,17 +55,16 @@
   text-align: left;
 }
 
-.all{
+.all {
   position: relative;
-  background-color:white;
+  background-color: white;
   padding-bottom: 2px;
   z-index: 1000;
 }
 
-
-.allActive{
+.allActive {
   position: relative;
-  background:rgba(11, 18, 25, 0.5);
+  background: rgba(11, 18, 25, 0.5);
   padding-bottom: 2px;
   z-index: 1000;
 }
@@ -74,7 +72,7 @@
 .overlay {
   width: 100%;
   height: 100%;
-  background: rgba(11, 18, 25, 0.7);;
+  background: rgba(11, 18, 25, 0.7);
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -83,16 +81,14 @@
   z-index: 99;
 }
 
-.overlayPassive{
+.overlayPassive {
   display: none;
 }
 
-
-.memberFullInfo{
+.memberFullInfo {
   position: relative;
   z-index: 1;
 }
-
 
 .font {
   width: 30px;
@@ -101,124 +97,196 @@
 
 .main {
   @include main;
-  h1{
+
+  h1 {
     @include mainH1;
   }
 }
 
-.mainTitle{
+.mainTitle {
   @include mainTitle;
-  button{
+
+  button {
     @include mainTitleButton;
   }
 }
 
-.addMember{
+.addMember {
   @include addMember
 }
 
+.mainButton {
+  margin-top: -5px;
+
+  img {
+    margin-left: 13%;
+  }
+}
+
 @media (min-width: 1025px) and (max-width: 1199px) {
-  .mainTitle{
-    button{
+  .mainTitle {
+    button {
       @include mainTitleButtonLapTop;
     }
-    h1{
+
+    h1 {
       margin-left: 2.5%;
+    }
+  }
+
+  .mainButton {
+    margin-top: -5px;
+
+    img {
+      margin-left: 20px;
+    }
+  }
+
+  .mainButton {
+    left: 91%;
+
+    img {
+      margin: 5px;
     }
   }
 }
 
-
-
 @media (min-width: 769px) and (max-width: 1024px) {
   .mainTitle {
-    .mainButton {
-      right: 0%;
-      top: -19px;
-    }
-    h1{
+    .mainButton {}
+
+    h1 {
       margin-left: 2.5%;
+    }
+  }
+
+  .mainButton {
+    left: 86%;
+
+    img {
+      margin: 5px;
     }
   }
 }
 
 //Tablet
 
-@media (min-width: 691px) and (max-width: 768px) {
-  .addMember{
-    button{
+@media (min-width: 690px) and (max-width: 769px) {
+  .addMember {
+    button {
       right: 3.5%;
     }
   }
 
-  .mainTitle{
-    h1{
+  .mainTitle {
+    h1 {
       margin-left: 2.5%;
+    }
+  }
+
+  .mainButton {
+    left: 84%;
+
+    img {
+      margin: 5px;
     }
   }
 }
 
-@media (min-width: 626px) and (max-width:690px) {
+@media (min-width: 625px) and (max-width:690px) {
   .mainTitle {
     .mainButton {
       right: 5%;
       top: -13px;
+
+      img {
+        margin: 5px;
+      }
     }
 
-    h1{
+    h1 {
       margin-left: 2.5%;
     }
   }
 }
 
 @media (min-width: 520px) and (max-width: 625px) {
-  .addMember{
-    button{
+  .addMember {
+    button {
       right: 8%;
     }
   }
-  .mainTitle{
-    h1{
+
+  .mainTitle {
+    h1 {
       margin-left: 2.5%;
+    }
+  }
+
+  .mainButton {
+    left: 78%;
+
+    img {
+      margin: 5px;
+      width: 12px;
     }
   }
 }
 
-@media (min-width: 426px) and (max-width: 519px) {
-  .addMember{
-    button{
+@media (min-width: 425px) and (max-width: 520px) {
+  .addMember {
+    button {
       right: 10%;
     }
   }
-  .mainTitle{
-    h1{
+
+  .mainTitle {
+    h1 {
       margin-left: 2.5%;
+    }
+  }
+
+  .mainButton {
+    left: 72%;
+
+    img {
+      margin: 5px;
+      width: 12px;
     }
   }
 }
 
 //medium
-@media (min-width: 376px) and (max-width: 425px) {
-  .mainButton{
+@media (min-width: 375px) and (max-width: 425px) {
+  .mainButton {
     right: 22%;
-    top:-13px;
+    top: -13px;
   }
-  .addMember{
-    button{
+
+  .addMember {
+    button {
       right: 17%;
     }
   }
 
-  .mainTitle{
-    h1{
+  .mainTitle {
+    h1 {
       margin-left: 2.5%;
+    }
+  }
+
+  .mainButton {
+    left: 67%;
+
+    img {
+      margin: 5px;
+      width: 12px;
     }
   }
 }
 
-
 //small
-@media (min-width: 320px) and (max-width:375px ) {
+@media (min-width: 310px) and (max-width:375px) {
   .main {
     h1 {
       font-size: 20px;
@@ -230,15 +298,18 @@
       bottom: 10px;
 
       button {
-        right: 15%;
+        right: 19%;
         padding-right: 1px;
+        font-size: 14px;
+        margin-top: 10px;
       }
-
     }
+  }
 
+  .mainButton {
+    img {
+      margin: 5px;
+      width: 12px;
+    }
   }
 }
-
-
-
-
