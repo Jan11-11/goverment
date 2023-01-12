@@ -1,4 +1,3 @@
-import  React from "react";
 import "./fullInfoLeftPart.scss";
 import {IMemberFullInfo} from "../../types/models"
 interface IActive{

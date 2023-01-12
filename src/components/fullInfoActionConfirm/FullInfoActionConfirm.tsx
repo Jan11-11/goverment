@@ -1,4 +1,3 @@
-import React from "react";
 import "./fullInfoActionConfirm.scss";
 import { deleteProduct } from "../../store/actions/governmentAddRemoveMembers";
 import { useAppDispatch } from "../../hooks";

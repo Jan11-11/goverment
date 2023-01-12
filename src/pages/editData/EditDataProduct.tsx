@@ -1,7 +1,7 @@
 import { Header } from "../../components/header";
 import "./editDataProduct.scss";
 import { editeAProduct } from "../../store/actions/governmentAddRemoveMembers"
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect} from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
 import { uniqueProductAction } from "../../store/actions/uniqueProductAction";
 import { useAppSelector, useAppDispatch } from "../../hooks";
@@ -9,7 +9,6 @@ import { useAppSelector, useAppDispatch } from "../../hooks";
 type MyEdite = Record<string | number, string | string>
 
 export function EditDataProduct() {
-  let obj: MyEdite = {}
   const { product, error, loading } = useAppSelector(state => state.uniqueProduct);
 
   const [editeProduct, setEditeProduct] = useState<MyEdite>({
@@ -70,7 +69,6 @@ export function EditDataProduct() {
     })
   }
   
-
   const blurFullName = (event: React.FocusEvent<HTMLElement>) => {
     event.preventDefault();
     delete editeErrorProduct.fullName;

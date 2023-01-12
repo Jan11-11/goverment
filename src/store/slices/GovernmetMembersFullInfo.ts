@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction, Dispatch } from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import { IMemberFullInfo } from "../../types/models";
 
 interface IFullInfo {
@@ -38,7 +38,7 @@ export const governmentMembersFullInfo = createSlice({
         editeMember: (state, action) => {
             console.log(action.payload)
             state.membersFullInfo = state.membersFullInfo.map((member) => {
-                if (member.id == action.payload.id) {
+                if (member.id === action.payload.id) {
                     return action.payload;
                 }
                 return member;

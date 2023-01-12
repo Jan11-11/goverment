@@ -1,9 +1,8 @@
 import { Header } from "../../components/header";
 import "./createDataProduct.scss";
-import { useState, useEffect, useRef } from 'react';
+import { useState} from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../hooks";
-import { fetchGovernmentMemberFullInfo } from "../../store/actions/governmentMembersFullInfoAction";
 import { addProduct } from "../../store/actions/governmentAddRemoveMembers";
 interface ICreateMember {
     [key: string]: string

@@ -1,4 +1,3 @@
-import React from "react";
 import "./loginHeader.scss";
 export const LoginHeader = () => {
     return (

@@ -1,8 +1,6 @@
-import React from "react";
 import { useState } from "react";
 import { IMemberFullInfo } from "../../types/models";
 import "./homeFullInfoProduct.scss"
-import { FullInfoActionConfirm } from "../fullInfoActionConfirm/FullInfoActionConfirm";
 import { FullInfoRightPart } from "../fullInfoRightPart/FullInfoRightPart";
 import { FullInfoLeftPart } from "../fullInfoLeftPart";
 

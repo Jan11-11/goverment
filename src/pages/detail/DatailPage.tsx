@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import "./detail.scss";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { uniqueProductAction } from "../../store/actions/uniqueProductAction";
 import { Header } from "../../components/header";

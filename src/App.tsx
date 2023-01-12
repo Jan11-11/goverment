@@ -1,8 +1,3 @@
-import React from 'react';
-import { fetchGovernmentMemberFullInfo } from "../src/store/actions/governmentMembersFullInfoAction";
-import { fetchGovernmentMember } from "../src/store/actions/governmentMembersAction"
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "./hooks";
 import { Routes, Route } from "react-router-dom";
 import { Login } from "./pages/login"
 import { Home } from "./pages/home";

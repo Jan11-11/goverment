@@ -14,10 +14,7 @@ interface ILogin {
      const [loginError, setLoginError] = useState<ILogin>({});
      const [password, setPassword] = useState<ILogin>({});
      const [passwordError, setPasswordError] = useState<ILogin>({});
-     
      const [active, setActive] = useState(false)
-
-
 
      const checkValidation = (e: any) => {
          e.preventDefault();
