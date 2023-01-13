@@ -56,10 +56,11 @@ export const deleteProduct = createAsyncThunk(
     async (id: IDelete, { dispatch }) => {
         const response1 = await fetch(`http://localhost:3000/membersInfo/${id}`, { method: "DELETE" });
         const response = await fetch(`http://localhost:3000/membersFullInfo/${id}`, { method: "DELETE" });
-        const data1 = await response1.json();
-        const data = await response.json();
-        dispatch(deleteMember(id));
-        dispatch(deleteMember1(id));
+        if(response.ok && response1.ok){
+            dispatch(deleteMember(id));
+            dispatch(deleteMember1(id));
+        }
+       
     }
 )
 

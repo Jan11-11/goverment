@@ -35,7 +35,6 @@ export const governmentMembers = createSlice({
             })
         },
         editeMember1: (state, action) => {
-            console.log(action.payload);
             state.members = state.members.map((member) => {
                 if (member.id === action.payload.id) {
                     return action.payload;
