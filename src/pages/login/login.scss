@@ -212,6 +212,14 @@ $normal: "normal";
 .remcheck {
   color: #06554D;
 }
+.remcheck{
+  input[type="checkbox"]:hover{
+    cursor: pointer;
+  }
+  label:hover{
+    cursor: pointer;
+  }
+}
 
 #saveCheck {
   color: #06554D;

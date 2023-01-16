@@ -21,8 +21,11 @@ export function CreateDataProduct() {
     }
     const uploadImageHandler = (e: any) => {
         convertBase64(e.target.files[0]).then((res: any) => {
-            setImg(res);
-            setCreateProduct({ ...createProduct, img: res })
+            if (e.target.files[0]) {
+                setImg(res);
+                setCreateProduct({ ...createProduct, img: res })
+            }
+           
         });
     }
 
@@ -51,7 +54,7 @@ export function CreateDataProduct() {
 
         }
 
-        if (createProduct.img) {
+        if (createProduct.img && createProduct.img.length>=1) {
             check++;
             if (errorProduct.img) {
                 delete errorProduct.img;
@@ -70,14 +73,17 @@ export function CreateDataProduct() {
     }
     const convertBase64 = (file: any) => {
         return new Promise((resolve, reject) => {
-            const fileReader = new FileReader();
+
+            if (file) {
+                const fileReader = new FileReader();
             fileReader.readAsDataURL(file)
             fileReader.onload = () => {
                 resolve(fileReader.result);
             }
-            fileReader.onerror = (error) => {
-                reject(error);
             }
+            // fileReader.onerror = (error) => {
+            //     reject(error);
+            // }
         })
     }
 

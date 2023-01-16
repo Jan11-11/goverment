@@ -31,9 +31,17 @@ export function EditDataProduct() {
   }
 
   const uploadImageHandler = (e: any) => {
-    convertBase64(e.target.files[0]).then((res: any) => {
-      setEditeProduct({ ...editeProduct, img: res })
-    });
+    console.log("hekljdfs");
+    if(e.target.files){
+  convertBase64(e.target.files[0]).then((res: any) => {
+    console.log(res);
+    setEditeProduct({ ...editeProduct, img: res })
+});
+}
+
+
+   
+
   }
   if (id.state != null) {
     localStorage.setItem("id", JSON.stringify(id.state.id));
@@ -57,16 +65,22 @@ export function EditDataProduct() {
   }
 
   const convertBase64 = (file: any) => {
+    console.log(file)
+   
     return new Promise((resolve, reject) => {
+
+     if (file) {
       const fileReader = new FileReader();
       fileReader.readAsDataURL(file)
       fileReader.onload = () => {
         resolve(fileReader.result);
       }
-      fileReader.onerror = (error) => {
-        reject(error);
-      }
+     }
+      // fileReader.onerror = (error) => {
+      //   reject(error);
+      // }
     })
+   
   }
   
   const blurFullName = (event: React.FocusEvent<HTMLElement>) => {
@@ -151,7 +165,7 @@ export function EditDataProduct() {
             <div className="createInput" id="createInput">
               <div className="createName" id="createName">
                 <label className={editeErrorProduct.fullName ? "labelError" : ""}>Անուն Ազգանուն</label>
-                <input id={editeErrorProduct.fullName ? "inputError" : ""} name={"fullName"} type="text" value={editeProduct.fullName} onBlur={blurFullName} onChange={(event) => {
+                <input id={editeErrorProduct.fullName ? "inputError" : ""} name={"fullName"} type="text" value={editeProduct.fullName || ""} onBlur={blurFullName} onChange={(event) => {
                   event.preventDefault();
                   setEditeProduct({ ...editeProduct, [event.target.name]: event.target.value })
                 }
@@ -160,7 +174,7 @@ export function EditDataProduct() {
               </div>
               <div className="createInfo" id="createInfo">
                 <label className={editeErrorProduct.title ? "labelError" : ""}>Պաշտոն</label>
-                <input id={editeErrorProduct.title ? "titleErrorMessage" : ""} type="text" name={"title"} value={editeProduct.title} onBlur={blurTitle} onChange={(event) => {
+                <input id={editeErrorProduct.title ? "titleErrorMessage" : ""} type="text" name={"title"} value={editeProduct.title || ""} onBlur={blurTitle} onChange={(event) => {
                   event.preventDefault();
                   setEditeProduct({ ...editeProduct, [event.target.name]: event.target.value })
                 }
@@ -196,8 +210,9 @@ export function EditDataProduct() {
                 <input type="file" accept="image/*" name="file" id="file" style={{ "display": "none" }} onChange={(e) => uploadImageHandler(e)} />
               </div>
               {editeProduct.img?<div id="delDiv" onClick={() => {
-                editeProduct.img = "";
-                setEditeProduct({ ...editeProduct })
+                delete editeProduct.img;
+                setEditeProduct({...editeProduct});
+                console.log(editeProduct);
               }}>
                 <img src="../../../../government/trash.svg" />
                 <label>Ջնջել</label>

@@ -1,5 +1,4 @@
 @use "sass:math";
-
 .createData {
   overflow-x: hidden;
   font-family: "Segoe UI";
@@ -95,6 +94,8 @@
         background-color: #FFFFFF;
         padding: 12px 80px 16px 80px;
         font-size: 20px;
+        cursor: pointer;
+        
       }
 
       .addBtn {
@@ -104,12 +105,33 @@
         background-color: #06554D;
         padding: 12px 80px 16px 80px;
         font-size: 20px;
+        cursor: pointer;
       }
+    }
+
+    .addBtn:hover{
+      cursor: pointer;
+      background: #E1AA5A;
+    }
+    .addBtn:active{
+      cursor: pointer;
+      background: #9E9E9E;
+
+    }
+    .removeBtn:hover{
+      cursor: pointer;
+      background: #E1AA5A;
+    }
+    .removeBtn:active{
+      cursor: pointer;
+      background: #9E9E9E;
+
     }
 
     #leftBtn {
       margin-left: -1%;
       margin-top: 0;
+     
 
       img {
         margin-right: 10px;
@@ -117,7 +139,11 @@
     }
   }
 }
-
+.leftbtn{
+  label:hover{
+    cursor: pointer;
+  }
+}
 .imageErrorIcon {
   color: red;
   fill: red;

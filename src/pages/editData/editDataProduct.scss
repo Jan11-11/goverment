@@ -161,6 +161,24 @@ $background-color: #0B1219;
     justify-content: space-between;
     padding-right: 42%;
 }
+.addBtn:hover{
+    cursor: pointer;
+    background: #E1AA5A;
+  }
+  .addBtn:active{
+    cursor: pointer;
+    background: #9E9E9E;
+
+  }
+  .removeBtn:hover{
+    cursor: pointer;
+    background: #E1AA5A;
+  }
+  .removeBtn:active{
+    cursor: pointer;
+    background: #9E9E9E;
+
+  }
 
 @media (max-width:1071px) and (min-width:769px) {
 

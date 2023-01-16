@@ -29,6 +29,10 @@ $background-color: #0B1219;
   }
 }
 
+.members:hover{
+  cursor: pointer;
+}
+
 @media (min-width: 899px) and (max-width:1199px) {
   #members {
     width: 95%;
