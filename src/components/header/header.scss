@@ -57,6 +57,9 @@
     @include headerContainerH6;
   }
 }
+.headerContainerH6:hover{
+  cursor: pointer;
+}
 
 @media (max-width:891px) and (min-width:769px) {
   #headerContainerH5 {

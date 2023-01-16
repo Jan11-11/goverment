@@ -1,6 +1,10 @@
+import { useState } from "react";
 import "./fullInfoRightPart.scss";
 import { IMemberFullInfo } from "../../types/models";
 import { useNavigate } from "react-router-dom";
+import {activeProduct} from "../../store/actions/governmentAddRemoveMembers";
+import  {useAppDispatch} from "../../hooks";
+
 interface IActive {
     deactivate: boolean,
     setDeactivate: (deactivate: boolean) => void,
@@ -15,6 +19,7 @@ interface IActive {
 
 export const FullInfoRightPart = ({ member, remove, setRemove, active, setActive, deactivate, setDeactivate, setKeyId }: IActive) => {
     const navigate = useNavigate();
+    const dispatch=useAppDispatch();
 
     return (
         <div id={active ? "" : "memberRightPartHiden"} className={"memberRightPart"}>
@@ -27,12 +32,16 @@ export const FullInfoRightPart = ({ member, remove, setRemove, active, setActive
                 <div className={"active_logos"} onClick={(event) => {
                     event.preventDefault();
                     setDeactivate(!deactivate);
-                }}> <img className={"switch_img"} src={deactivate ? "../../../government/deactivate.png" : "../../../government/Switch.png"} /></div>
+                }}> <img className={"switch_img"} src={deactivate ? "../../../government/deactivate.png" : "../../../government/Switch.png"} onClick={(event)=>{
+                event.preventDefault();
+                dispatch(activeProduct(member.id))
+                }
+                } /></div>
             </div>
             <div className={"editTrash"}>
                 <div className={deactivate ? "edite_logo iconDisabled" : "edite_logo"} onClick={(e) => {
                     e.preventDefault();
-                    navigate(`/edite`, { state: { id: member.id } })
+                    navigate("/edite", { state: { id: member.id } })
                 }
                 }><img className={"edite_img"} src={deactivate ? "../../../government/editePassive.png" : "../../../government/edite.svg"} /><p id={deactivate ? "memberAllParagraph" : ""}>{member.edite_str}</p></div>
                 <div onClick={(e) => {
@@ -45,5 +54,5 @@ export const FullInfoRightPart = ({ member, remove, setRemove, active, setActive
                 } className={deactivate ? "trash_logo iconDisabled" : "trash_logo"}><img className={"trash_img"} src={deactivate ? "../../../government/trashPassive.png" : "../../../government/trash.svg"} /><p id={deactivate ? "memberAllParagraph" : ""}>{member.trash_str}</p></div>
             </div>
         </div>
-    )
+    );
 }

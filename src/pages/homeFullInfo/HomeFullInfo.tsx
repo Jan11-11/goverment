@@ -1,4 +1,3 @@
-import React from "react";
 import { fetchGovernmentMemberFullInfo } from "../../store/actions/governmentMembersFullInfoAction";
 import { useAppSelector, useAppDispatch } from "../../hooks";
 import { useEffect, useState } from "react";

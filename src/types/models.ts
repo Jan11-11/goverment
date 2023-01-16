@@ -16,5 +16,6 @@ export interface IMemberFullInfo {
     trash_logo: string,
     trash_str: string,
     "active_logos": "string",
-    "active_str": string
+    "active_str": string,
+    active:boolean
 }

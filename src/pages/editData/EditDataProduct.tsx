@@ -34,8 +34,8 @@ export function EditDataProduct() {
     console.log("hekljdfs");
     if(e.target.files){
   convertBase64(e.target.files[0]).then((res: any) => {
-    console.log(res);
     setEditeProduct({ ...editeProduct, img: res })
+    
 });
 }
 
@@ -65,7 +65,6 @@ export function EditDataProduct() {
   }
 
   const convertBase64 = (file: any) => {
-    console.log(file)
    
     return new Promise((resolve, reject) => {
 
@@ -159,7 +158,7 @@ export function EditDataProduct() {
         <div className="pageTitle" id="createTitle"> Տվյալների խմբագրում</div>
         <div className="createpage" id="createpage">
           <div className={editeErrorProduct.img ? "createimg imageError" : "createimg"} id="createimg">
-            <img id={editeProduct.img ? "createdImg" : ""} src={editeProduct.img ? editeProduct.img : " ../../../../government/backgroundimage.png"} />
+            <img id={editeProduct.img ? "createdImg" : ""} src={editeProduct.img ? editeProduct.img : " ../../../../government/backgroundimage.png" }  />
           </div>
           <form className="create" id="create" autoComplete="off">
             <div className="createInput" id="createInput">
@@ -212,7 +211,6 @@ export function EditDataProduct() {
               {editeProduct.img?<div id="delDiv" onClick={() => {
                 delete editeProduct.img;
                 setEditeProduct({...editeProduct});
-                console.log(editeProduct);
               }}>
                 <img src="../../../../government/trash.svg" />
                 <label>Ջնջել</label>

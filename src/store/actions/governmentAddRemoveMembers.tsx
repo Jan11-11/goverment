@@ -1,8 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { addMember, deleteMember, editeMember } from "../slices/GovernmetMembersFullInfo";
+import { addMember, deleteMember, editeMember,activeMember } from "../slices/GovernmetMembersFullInfo";
 import { addMember1, deleteMember1, editeMember1 } from "../slices/GovernmentMembers";
-import { Simulate } from "react-dom/test-utils";
-import error = Simulate.error;
+import {store} from "../index";
 
 interface IDelete {
     id: number | null | undefined
@@ -16,7 +15,6 @@ interface IMember {
 export const addProduct = createAsyncThunk(
     "add",
     async (item: IMember, { dispatch }) => {
-        console.log(item)
         const fullMember = {
             "img": item.img,
             "title_key": "Պաշտոն։",
@@ -58,9 +56,9 @@ export const deleteProduct = createAsyncThunk(
         const response = await fetch(`http://localhost:3000/membersFullInfo/${id}`, { method: "DELETE" });
         if(response.ok && response1.ok){
             dispatch(deleteMember(id));
-            dispatch(deleteMember1(id));
+        dispatch(deleteMember1(id));
         }
-       
+        
     }
 )
 
@@ -101,12 +99,21 @@ export const editeAProduct = createAsyncThunk(
             rejectWithValue(error.message)
         }
     }
-)
+);
+export  const activeProduct=createAsyncThunk(
+    "active/product",
+    async (id:number,{dispatch,getState})=>{
+        const state=store.getState();
+        const item=state. membersFullInfo.  membersFullInfo.find((child:any)=>{
+            return id==child.id;
+        })
+        if (item){
+            const response=await fetch(`http://localhost:3000/membersFullInfo/${id}`, { method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({active:!item.active}) });
+            if (response.ok){
+                dispatch(activeMember(id));
+            }
+        }
 
-export const DeleteProduct = createAsyncThunk(
-    "delete/Member",
-    async (id) => {
-        await fetch(`http://localhost:3000/membersInfo/${id}`, { method: "DELETE" });
-        await fetch(`http://localhost:3000/membersFullInfo/${id}`, { method: "DELETE" })
     }
 )
+
