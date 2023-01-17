@@ -28,22 +28,22 @@ export const FullInfoRightPart = ({ member, remove, setRemove, active, setActive
                     event.preventDefault();
                     setActive(!active);
                 }} />
-                <p style={deactivate ? { color: "#9C9C9C" } : { color: "black" }}>{member.active_str}</p>
+                <p style={member.active ? { color: "#9C9C9C" } : { color: "black" }}>{member.active_str}</p>
                 <div className={"active_logos"} onClick={(event) => {
                     event.preventDefault();
                     setDeactivate(!deactivate);
-                }}> <img className={"switch_img"} src={deactivate ? "../../../government/deactivate.png" : "../../../government/Switch.png"} onClick={(event)=>{
+                }}> <img className={"switch_img"} src={member.active? "../../../government/deactivate.png" : "../../../government/Switch.png"} onClick={(event)=>{
                 event.preventDefault();
                 dispatch(activeProduct(member.id))
                 }
                 } /></div>
             </div>
             <div className={"editTrash"}>
-                <div className={deactivate ? "edite_logo iconDisabled" : "edite_logo"} onClick={(e) => {
+                <div className={member.active? "edite_logo iconDisabled" : "edite_logo"} onClick={(e) => {
                     e.preventDefault();
                     navigate("/edite", { state: { id: member.id } })
                 }
-                }><img className={"edite_img"} src={deactivate ? "../../../government/editePassive.png" : "../../../government/edite.svg"} /><p id={deactivate ? "memberAllParagraph" : ""}>{member.edite_str}</p></div>
+                }><img className={"edite_img"} src={member.active ? "../../../government/editePassive.png" : "../../../government/edite.svg"} /><p id={member.active ? "memberAllParagraph" : ""}>{member.edite_str}</p></div>
                 <div onClick={(e) => {
                     e.preventDefault();
                     setRemove(!remove);
@@ -51,7 +51,7 @@ export const FullInfoRightPart = ({ member, remove, setRemove, active, setActive
                     setKeyId(member.id);
                     navigate("/homeFullInfo");
                 }
-                } className={deactivate ? "trash_logo iconDisabled" : "trash_logo"}><img className={"trash_img"} src={deactivate ? "../../../government/trashPassive.png" : "../../../government/trash.svg"} /><p id={deactivate ? "memberAllParagraph" : ""}>{member.trash_str}</p></div>
+                } className={member.active ? "trash_logo iconDisabled" : "trash_logo"}><img className={"trash_img"} src={member.active ? "../../../government/trashPassive.png" : "../../../government/trash.svg"} /><p id={member.active ? "memberAllParagraph" : ""}>{member.trash_str}</p></div>
             </div>
         </div>
     );

@@ -30,6 +30,7 @@ interface ILogin {
              setLoginError({ ...loginError });
          }
 
+
             //  password validation
          if (password['password'] && password['password'].length >= 3 && password['password'].length <= 8) {
              check++;
@@ -62,7 +63,7 @@ interface ILogin {
                              <h3 className="loginFormTitle">Մուտք գործել</h3>
                              <div id="loginFormChildLogin" className="loginFormChild">
                                  <label>Գաղտնանուն</label>
-                                 <Input placeholder="Գաղտնանուն" name="login"
+                                 <Input placeholder="Գաղտնանուն" name="login" 
                                      onChange={(e) => {
                                          e.preventDefault();
                                          setCheckLogin({ ...checkLogin, [e.target.name]: e.target.value })
@@ -92,7 +93,7 @@ interface ILogin {
                              </div>
                              <div id="loginFormChildCheckbox" className="loginFormCheckbox">
                                  <div id="loginFormCheckboxChild" className="loginFormCheckboxChild">
-                                    <div className="remcheck"> <input type="checkbox" onClick={(e)=>{
+                                    <div className="remcheck"> <input  type="checkbox" onClick={(e)=>{
                                         setActive(!active)
                                     }}/>
                                      <label id={active?"unCheked":"saveCheck"}>Հիշել</label>

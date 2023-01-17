@@ -179,6 +179,15 @@ $background-color: #0B1219;
     background: #9E9E9E;
 
   }
+  #createInfo{
+    input[type="text"]::placeholder{
+      padding-left: 12px;
+      transform:translateY(4px);
+      
+    }
+  }
+
+
 
 @media (max-width:1071px) and (min-width:769px) {
 
@@ -288,6 +297,10 @@ $background-color: #0B1219;
     }
 
 }
+#delDiv:hover{
+    cursor: pointer;
+}
+
 
 @media (max-width:907px) and (min-width:769px) {
 

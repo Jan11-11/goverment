@@ -204,7 +204,7 @@ export function EditDataProduct() {
               <div id="uppDiv">
                 <label htmlFor="file">
                   <img src={editeErrorProduct.img ? "../../../../government/down.svg" : "../../../../government/vectordown1.png"} alt='img' />
-                  Ներբեռնել Նկար
+                  Ներբեռնել նկար
                 </label>
                 <input type="file" accept="image/*" name="file" id="file" style={{ "display": "none" }} onChange={(e) => uploadImageHandler(e)} />
               </div>

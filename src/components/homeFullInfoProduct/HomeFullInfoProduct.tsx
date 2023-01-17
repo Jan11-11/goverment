@@ -16,7 +16,7 @@ export const HomeFullInfoProduct = ({ member, remove, setRemove, keyId, setKeyId
     const [active, setActive] = useState(false);
     const [deactivate, setDeactivate] = useState(false);
     return (
-        <div className={active ? "memberActive member" : deactivate ? "member deactivate" : "member"}>
+        <div className={active ? "memberActive member" : member.active ? "member deactivate" : "member"}>
             <div className={"memberContent"}>
                 <FullInfoLeftPart member={member} deactivate={deactivate} remove={remove} setRemove={setRemove} active={active} setActive={setActive} />
                 <FullInfoRightPart member={member} deactivate={deactivate} setDeactivate={setDeactivate} setRemove={setRemove} remove={remove} keyId={keyId} setKeyId={setKeyId} active={active} setActive={setActive} />

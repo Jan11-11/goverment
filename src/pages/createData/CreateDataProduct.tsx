@@ -150,7 +150,7 @@ export function CreateDataProduct() {
                         <div className={errorProduct.img ? "leftbtn imageErrorMessage" : "leftbtn"} id="leftBtn">
                             <label htmlFor="file">
                                 <img src={errorProduct.img ? "../../../../government/down.svg" : "../../../../government/vectordown1.png"} className={errorProduct.img ? "imageErrorIcon" : ""} />
-                                Ներբեռնել Նկար
+                                Ներբեռնել նկար
                             </label>
                             <input type="file" accept="image/*" name="file" id="file" onChange={(e) => uploadImageHandler(e)}
                                 style={{ "display": "none" }} />

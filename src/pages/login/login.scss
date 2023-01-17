@@ -70,11 +70,12 @@ $normal: "normal";
 }
 
 @mixin loginFormCheckboxChild {
-  width: 58px;
+  width: 70px;
   position: absolute;
   right: 0px;
   display: flex;
   justify-content: space-between;
+
 }
 
 @mixin loginFormChildInput {
@@ -209,8 +210,19 @@ $normal: "normal";
   border: 2px solid red !important;
 }
 
+
 .remcheck {
   color: #06554D;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  input[type="checkbox"]{
+    margin-right: 7px;
+   width: 15px;
+   height: 15px;
+  }
+    
+  
 }
 .remcheck{
   input[type="checkbox"]:hover{
@@ -223,6 +235,7 @@ $normal: "normal";
 
 #saveCheck {
   color: #06554D;
+  font-size: 17px;
 }
 
 #unCheked {
