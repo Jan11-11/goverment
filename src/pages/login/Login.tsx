@@ -14,11 +14,19 @@ interface ILogin {
      const [loginError, setLoginError] = useState<ILogin>({});
      const [password, setPassword] = useState<ILogin>({});
      const [passwordError, setPasswordError] = useState<ILogin>({});
-     const [active, setActive] = useState(false)
+     const [active, setActive] = useState(false);
+     
+     
+     const regCheck: { [key: string]: RegExp } = {
+        login: new RegExp(/^[A-Za-z][A-Za-z0-9]*$/),
+        password: new RegExp(/^[A-Za-z][A-Za-z0-9]*$/),
+     }
 
      const checkValidation = (e: any) => {
          e.preventDefault();
          let check = 0;
+
+         
          if (checkLogin['login'] && checkLogin['login'].length >= 3 && checkLogin['login'].length <= 8) {
              check++;
              setLoginError({});
@@ -48,6 +56,10 @@ interface ILogin {
              navigate("/homeFullInfo")
          }
      }
+    
+    
+
+
 
 
      return (

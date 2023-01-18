@@ -23,6 +23,7 @@ export function EditDataProduct() {
   const navigate = useNavigate();
   const id = useLocation();
   const dispatch = useAppDispatch();
+  let fileReader:any = new FileReader();
 
   const regCheck: { [key: string]: RegExp } = {
     fullName: new RegExp(/^[\u0531-\u0561]{1}[\u0561-\u0586]{2,19}([-]{0,1}[\u0531-\u0561]{1}[\u0561-\u0586]{2,19}){0,1}[\s][\u0531-\u0561]{1}[\u0561-\u0586]{2,19}([-]{0,1}[\u0531-\u0561]{1}[\u0561-\u0586]{2,19}){0,1}$/),
@@ -31,11 +32,9 @@ export function EditDataProduct() {
   }
 
   const uploadImageHandler = (e: any) => {
-    console.log("hekljdfs");
     if(e.target.files){
   convertBase64(e.target.files[0]).then((res: any) => {
-    setEditeProduct({ ...editeProduct, img: res })
-    
+    setEditeProduct({ ...editeProduct, img:res})   
 });
 }
 
@@ -69,15 +68,11 @@ export function EditDataProduct() {
     return new Promise((resolve, reject) => {
 
      if (file) {
-      const fileReader = new FileReader();
       fileReader.readAsDataURL(file)
       fileReader.onload = () => {
         resolve(fileReader.result);
       }
      }
-      // fileReader.onerror = (error) => {
-      //   reject(error);
-      // }
     })
    
   }
@@ -206,10 +201,11 @@ export function EditDataProduct() {
                   <img src={editeErrorProduct.img ? "../../../../government/down.svg" : "../../../../government/vectordown1.png"} alt='img' />
                   Ներբեռնել նկար
                 </label>
-                <input type="file" accept="image/*" name="file" id="file" style={{ "display": "none" }} onChange={(e) => uploadImageHandler(e)} />
+                <input type="file" accept="image/*" name="file" id="file" style={{ "display": "none" }} value={Object.keys(fileReader).length>0?fileReader.files[0]:""} onChange={(e) => uploadImageHandler(e)} />
               </div>
               {editeProduct.img?<div id="delDiv" onClick={() => {
                 delete editeProduct.img;
+                 fileReader="";
                 setEditeProduct({...editeProduct});
               }}>
                 <img src="../../../../government/trash.svg" />
