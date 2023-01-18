@@ -41,7 +41,7 @@ export const FullInfoRightPart = ({ member, remove, setRemove, active, setActive
             <div className={"editTrash"}>
                 <div className={member.active? "edite_logo iconDisabled" : "edite_logo"} onClick={(e) => {
                     e.preventDefault();
-                    navigate("/edite", { state: { id: member.id } })
+                    navigate(`/edite/${member.id}`, { state: { id: member.id } })
                 }
                 }><img className={"edite_img"} src={member.active ? "../../../government/editePassive.png" : "../../../government/edite.svg"} /><p id={member.active ? "memberAllParagraph" : ""}>{member.edite_str}</p></div>
                 <div onClick={(e) => {
