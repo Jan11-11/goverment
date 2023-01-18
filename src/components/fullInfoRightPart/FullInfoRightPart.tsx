@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./fullInfoRightPart.scss";
 import { IMemberFullInfo } from "../../types/models";
 import { useNavigate } from "react-router-dom";

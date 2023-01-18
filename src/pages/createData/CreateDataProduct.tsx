@@ -1,7 +1,7 @@
 import { Header } from "../../components/header";
 import "./createDataProduct.scss";
 import { useState} from 'react';
-import { useLocation, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../hooks";
 import { addProduct } from "../../store/actions/governmentAddRemoveMembers";
 interface ICreateMember {
@@ -81,9 +81,6 @@ export function CreateDataProduct() {
                 resolve(fileReader.result);
             }
             }
-            // fileReader.onerror = (error) => {
-            //     reject(error);
-            // }
         })
     }
 

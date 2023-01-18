@@ -58,10 +58,6 @@ interface ILogin {
      }
     
     
-
-
-
-
      return (
          <div className="login">
              <div className="main">
