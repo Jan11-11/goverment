@@ -182,12 +182,29 @@ $background-color: #0B1219;
   #createInfo{
     input[type="text"]::placeholder{
       padding-left: 12px;
-      transform:translateY(4px);
-      
+    //   transform:translateY(10px);
+
     }
   }
 
+  #createName{
+    input[type="text"]::placeholder{
+      padding-left: 10px;
+    }
+  }
 
+  #createName{
+    input{
+      padding-left: 10px;
+    }
+  }
+
+  #createInfo{
+    input{
+      padding-left: 10px;
+    padding-top: 10px;
+    }
+  }
 
 @media (max-width:1071px) and (min-width:769px) {
 
